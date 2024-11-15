@@ -1,0 +1,324 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #121212;
+    color: #FFFFF0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Barre du haut */
+.top-bar {
+    background-color: #FFFFF0;
+    color: #0e0e0e;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* Menu button */
+.menu-button {
+    font-size: 1.5rem;
+    color: #FFFFF0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+/* Navigation */
+.top-nav {
+    margin-right: 50px;
+    margin-left: auto;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.top-nav a {
+    color: #FFFFF0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.top-nav a:hover {
+    color: #c0c0c0;
+}
+
+/* Contact button */
+.contact-button {
+    background-color: #121212;
+    color: #FFFFF0;
+    margin-right: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid #FFFFF0;
+    border-radius: 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #FFFFF0;
+    color: #121212;
+}
+
+/* Bouton de toggle de la sidebar */
+.toggle-sidebar {
+    background: none;
+    border: none;
+    color: #0e0e0ead;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: rgba(14, 14, 14, 0.8);
+    color: #FFFFF0;
+    padding: 40px 20px; /* Augmente le padding pour décaler les éléments */
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 52px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Masquer la sidebar */
+.sidebar-hidden {
+    transform: translateX(-250px); /* Décale la sidebar à gauche */
+}
+
+/* Main Content */
+.main-content {
+    padding: 0px;
+    flex: 1;
+}
+
+.main-content-hidden {
+    transform: translateX(250px); /* Décale la sidebar à gauche */
+}   
+
+/* Sections */
+section {
+    padding: 20rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+/* Logo et texte dans la barre du haut */
+.top-bar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-bar .header-text {
+    font-size: 1rem;
+}
+
+/* Transparence lorsque scroll */
+.top-bar.scrolled {
+    background-color: rgba(14, 14, 14, 0.8); /* Transparence de 20% */
+    color: #FFFFF0;
+}
+
+.top-nav.scrolled {
+    color: #FFFFF0;
+}
+
+/* Bouton de toggle de la sidebar */
+.toggle-sidebar.scrolled {
+    color: #FFFFF0;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center bottom;
+    border: 3px solid #FFFFF0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin: 15px 0;
+}
+
+.sidebar-nav a {
+    color: #FFFFF0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.sidebar-nav a:hover {
+    color: #c0c0c0;
+}
+
+/* Taille et animation des blocs */
+.block {
+    background-color: #FFFFF0;
+    color: #121212;
+    border-radius: 0px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.block:hover {
+    transform: scale(1.1);
+}
+
+.home {
+    background-color: #FFFFF0;
+    color: #121212;
+}
+
+/* Sections alternées avec couleurs de fond */
+#projects {
+    background-color: #121212;
+    color: #FFFFF0;
+}
+
+#experiences {
+    color: #FFFFF0;
+    background-color: #121212;
+}
+
+#personal {
+    background-color: #121212;
+    color: #FFFFF0;
+}
+
+/* Exemple d'image de fond */
+#projects {
+    background-image: url('images/background_projects.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Exemple d'image de fond */
+#experiences {
+    background-image: url('images/background_exp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Exemple d'image de fond */
+#personal {
+    background-image: url('images/background_perso.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+/* Footer Style */
+.site-footer {
+    background-color: #0e0e0e;
+    color: #FFFFF0;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #FFFFF0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #c0c0c0;
+}
+
+
+

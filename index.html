@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Personnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre du haut -->
+    <div class="top-bar">
+        <button class="toggle-sidebar" id="toggleSidebar">
+            &#9776; <!-- Icône hamburger -->
+        </button>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#personal">Personnel</a></li>
+            </ul>
+        </nav>
+        <button class="contact-button">Contact</button>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture">
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#personal">Personnel</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <section class="home">
+            <h2>Bienvenue sur mon site</h2>
+            <p>Voici une présentation de mon parcours professionnel et académique.</p>
+        </section>
+        <section id="projects" class="block">
+            <h1>Parcours académique</h1>
+            <p>Ajouter une description</p>
+        </section>
+        <section id="experiences" class="block">
+            <h1>Expériences et Projets</h1>
+            <p>Ajouter une description</p>
+        </section>
+        <section id="personal" class="block">
+            <h1>Personnel</h1>
+            <p>Pour en savoir plus sur mes activités, passions, valeurs</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Expériences</h3>
+            <ul>
+                <li><a href="#experience1">Stage en R&D</a></li>
+                <li><a href="#experience2">Consultant Data</a></li>
+                <li><a href="#experience3">Projet de recherche</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Projets</h3>
+            <ul>
+                <li><a href="#project1">Application IA</a></li>
+                <li><a href="#project2">Site web personnel</a></li>
+                <li><a href="#project3">Outil de visualisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Personnel</h3>
+            <ul>
+                <li><a href="#personal1">Centres d'intérêt</a></li>
+                <li><a href="#personal2">Voyages</a></li>
+                <li><a href="#personal3">Volontariat</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>
