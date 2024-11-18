@@ -59,10 +59,14 @@ body {
 }
 
 .top-nav a {
-    color: #FFFFF0;
+    color: #0e0e0e;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
+}
+
+.top-nav.scrolled a{
+    color: #FFFFF0;
 }
 
 .top-nav a:hover {
@@ -105,7 +109,7 @@ body {
     text-align: center;
     height: 100vh;
     position: fixed;
-    left: 0;
+    left: -250px;
     top: 52px;
     z-index: 10;
     display: flex;
@@ -116,7 +120,7 @@ body {
 
 /* Masquer la sidebar */
 .sidebar-hidden {
-    transform: translateX(-250px); /* Décale la sidebar à gauche */
+    transform: translateX(250px); /* Décale la sidebar à gauche */
 }
 
 /* Main Content */
@@ -320,5 +324,223 @@ section {
     color: #c0c0c0;
 }
 
+/* En-tête de la page */
+.page-header {
+    position: relative;
+    text-align: center;
+}
 
+.header-image {
+    width: 100%;
+    /*height: 300px;*/
+    object-fit: cover;
+}
 
+.page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFF0;
+    font-size: 2.5rem;
+}
+
+/* Description Block */
+.description-block {
+    padding: 2rem;
+    background-color: #FFFFF0;
+    color: #121212;
+    text-align: center;
+}
+
+.image-banner {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.banner-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.banner-image:hover {
+    transform: scale(1.1); /* Zoom à 110% */
+}
+
+/* Experience Blocks */
+.experience-block {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+/* Bloc impair : fond ivoire */
+.experience-block:nth-child(even) {
+    background-color: #FFFFF0; /* Couleur ivoire */
+    color: #121212; /* Texte noir */
+}
+
+/* Bloc pair : fond noir */
+.experience-block:nth-child(odd) {
+    background-color: #121212; /* Couleur noir profond */
+    color: #FFFFF0; /* Texte ivoire */
+}
+
+.exp-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.right {
+    margin-left: 20px;
+    order: 2;
+}
+
+.exp-text {
+    flex: 1;
+}
+
+/* Animation Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Bandeau d'en-tête pleine largeur */
+.full-width-banner {
+    width: 100%;
+    height: 400px; /* Ajuste la hauteur selon tes préférences */
+    background-image: url('images/background_exp.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay et titre dans le bandeau */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+}
+
+.page-title {
+    color: #FFFFF0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style des sections */
+.section {
+    cursor: pointer;
+    padding: 10rem;
+    background-color: #FFFFF0;
+    color: #121212;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation au survol */
+.section:hover {
+    transform: scale(1.05);
+}
+
+/* Style du résumé */
+.summary {
+    padding: 10rem;
+    color: #121212;
+    background-color: #FFFFF0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Caché par défaut */
+.summary.hidden {
+    display: none;
+}
+
+/* Style du carrousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+/* Flèches de navigation */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFF0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-indicators .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFF0;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.carousel-indicators .dot.active {
+    opacity: 1;
+}

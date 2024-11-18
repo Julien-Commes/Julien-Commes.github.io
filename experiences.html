@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expériences</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Barre du haut -->
+    <div class="top-bar">
+        <button class="toggle-sidebar" id="toggleSidebar">
+            &#9776; <!-- Icône hamburger -->
+        </button>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="#personal">Personnel</a></li>
+            </ul>
+        </nav>
+        <button class="contact-button">Contact</button>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture">
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="#personal">Personnel</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <!-- En-tête de la page -->
+        <section class="page-header full-width-banner">
+            <div class="banner-overlay">
+                <h1 class="page-title">Mes Expériences</h1>
+            </div>
+        </section>
+
+        <!-- Bloc de description -->
+        <section class="description-block">
+            <p>Bienvenue sur la page de mes expériences. Découvrez mes stages, mes emplois et mes projets de recherche passés.</p>
+            <div class="image-banner">
+                <img src="images/experiences/experiences_goggo.jpeg" alt="Expérience 1" class="banner-image" data-target="exp1-block">
+                <img src="images/experiences/experiences_mentech.png" alt="Expérience 2" class="banner-image" data-target="exp2-block">
+                <img src="images/experiences/experiences_diffusion.png" alt="Expérience 3" class="banner-image" data-target="exp3-block">
+            </div>
+        </section>
+
+        <!-- Blocs d'expériences -->
+        <section id="exp1-block" class="experience-block">
+            <img src="images/experiences/experiences_goggo.jpeg" alt="Expérience 1" class="exp-image left">
+            <div class="exp-text">
+                <h2>Stage en R&D</h2>
+                <p>J'ai travaillé sur des projets innovants en recherche et développement dans le domaine de l'IA et de la vision par ordinateur.</p>
+            </div>
+        </section>
+
+        <section id="exp2-block" class="experience-block">
+            <img src="images/experiences/experiences_mentech.png" alt="Expérience 2" class="exp-image right">
+            <div class="exp-text">
+                <h2>Consultant Data</h2>
+                <p>En tant que consultant, j'ai aidé plusieurs entreprises à implémenter des solutions basées sur les données pour améliorer leurs performances.</p>
+            </div>
+        </section>
+
+        <section id="exp3-block" class="experience-block">
+            <img src="images/experiences/experiences_diffusion.png" alt="Expérience 3" class="exp-image left">
+            <div class="exp-text">
+                <h2>Projet de recherche</h2>
+                <p>Ce projet portait sur l'application des modèles de diffusion pour la génération d'images de haute qualité.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Expériences</h3>
+            <ul>
+                <li><a href="#exp1-block">Stage en R&D</a></li>
+                <li><a href="#exp2-block">Consultant Data</a></li>
+                <li><a href="#exp3-block">Projet de recherche</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Projets</h3>
+            <ul>
+                <li><a href="#project1">Application IA</a></li>
+                <li><a href="#project2">Site web personnel</a></li>
+                <li><a href="#project3">Outil de visualisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Personnel</h3>
+            <ul>
+                <li><a href="#personal1">Centres d'intérêt</a></li>
+                <li><a href="#personal2">Voyages</a></li>
+                <li><a href="#personal3">Volontariat</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>
