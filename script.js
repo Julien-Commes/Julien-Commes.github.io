@@ -68,43 +68,52 @@ sections.forEach(section => {
     });
 });
 
-let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-images img');
-const dots = document.querySelectorAll('.carousel-indicators .dot');
-const carouselImages = document.querySelector('.carousel-images');
+// Sélectionne tous les carrousels
+const carousels = document.querySelectorAll('.carousel');
 
-// Fonction pour afficher l'image active
-function showImage(index) {
-    if (index < 0) {
-        currentIndex = images.length - 1;
-    } else if (index >= images.length) {
-        currentIndex = 0;
-    } else {
-        currentIndex = index;
+carousels.forEach(carousel => {
+    let currentIndex = 0;
+
+    const images = carousel.querySelectorAll('.carousel-images img');
+    const dots = carousel.querySelectorAll('.carousel-indicators .dot');
+    const carouselImages = carousel.querySelector('.carousel-images');
+    const leftArrow = carousel.querySelector('.carousel-arrow.left');
+    const rightArrow = carousel.querySelector('.carousel-arrow.right');
+
+    // Fonction pour afficher l'image active
+    function showImage(index) {
+        if (index < 0) {
+            currentIndex = images.length - 1;
+        } else if (index >= images.length) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        // Met à jour la position du carrousel
+        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Met à jour les indicateurs
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
     }
 
-    // Met à jour la position du carrousel
-    carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    // Met à jour les indicateurs
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
-}
-
-// Gérer les clics sur les flèches
-document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
-    showImage(currentIndex - 1);
-});
-document.querySelector('.carousel-arrow.right').addEventListener('click', () => {
-    showImage(currentIndex + 1);
-});
-
-// Gérer les clics sur les indicateurs
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        showImage(index);
+    // Gérer les clics sur les flèches
+    leftArrow.addEventListener('click', () => {
+        showImage(currentIndex - 1);
     });
-});
 
-// Initialiser le carrousel
-showImage(currentIndex);
+    rightArrow.addEventListener('click', () => {
+        showImage(currentIndex + 1);
+    });
+
+    // Gérer les clics sur les indicateurs
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showImage(index);
+        });
+    });
+
+    // Initialiser le carrousel
+    showImage(currentIndex);
+});
