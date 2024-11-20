@@ -45,89 +45,75 @@ document.querySelectorAll('.banner-image').forEach(image => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".section");
+// Sélection de toutes les sections
+const sections = document.querySelectorAll('.section');
 
-    sections.forEach((section) => {
-        section.addEventListener("click", () => {
-            let existingSummary = section.nextElementSibling;
-            if (existingSummary && existingSummary.classList.contains("summary")) {
-                existingSummary.remove();
-            } else {
-                document.querySelectorAll(".summary").forEach((s) => s.remove());
+sections.forEach(section => {
+    section.addEventListener('click', () => {
+        // Trouver le bloc de contenu associé
+        const contentId = section.id + '-content';
+        const content = document.getElementById(contentId);
 
-                const summary = document.createElement("div");
-                summary.classList.add("summary");
+        // Afficher ou masquer le contenu
+        if (content.classList.contains('active')) {
+            content.classList.remove('active');
+        } else {
+            // Masquer les autres contenus ouverts (optionnel)
+            document.querySelectorAll('.section-content.active').forEach(activeContent => {
+                activeContent.classList.remove('active');
+            });
 
-                summary.innerHTML = `
-                    <h3>Projects Overview</h3>
-                    <p>Explore the featured projects with a gallery of images showcasing the work.</p>
-                    <div class="carousel">
-                        <div class="carousel-images">
-                            <img src="images/no_image.jpg" alt="Project 1">
-                            <img src="images/no_image.jpg" alt="Project 2">
-                            <img src="images/no_image.jpg" alt="Project 3">
-                        </div>
-                        <button class="carousel-arrow left">&#8249;</button>
-                        <button class="carousel-arrow right">&#8250;</button>
-                        <div class="carousel-indicators">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>
-                `;
+            content.classList.add('active');
+        }
+    });
+});
 
-                section.parentNode.insertBefore(summary, section.nextSibling);
+// Sélectionne tous les carrousels
+const carousels = document.querySelectorAll('.carousel');
 
-                // Initialiser le carrousel
-                initCarousel(summary.querySelector(".carousel"));
-            }
+carousels.forEach(carousel => {
+    let currentIndex = 0;
+
+    const images = carousel.querySelectorAll('.carousel-images img');
+    const dots = carousel.querySelectorAll('.carousel-indicators .dot');
+    const carouselImages = carousel.querySelector('.carousel-images');
+    const leftArrow = carousel.querySelector('.carousel-arrow.left');
+    const rightArrow = carousel.querySelector('.carousel-arrow.right');
+
+    // Fonction pour afficher l'image active
+    function showImage(index) {
+        if (index < 0) {
+            currentIndex = images.length - 1;
+        } else if (index >= images.length) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        // Met à jour la position du carrousel
+        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Met à jour les indicateurs
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+
+    // Gérer les clics sur les flèches
+    leftArrow.addEventListener('click', () => {
+        showImage(currentIndex - 1);
+    });
+
+    rightArrow.addEventListener('click', () => {
+        showImage(currentIndex + 1);
+    });
+
+    // Gérer les clics sur les indicateurs
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showImage(index);
         });
     });
 
-    function initCarousel(carousel) {
-        const imagesContainer = carousel.querySelector(".carousel-images");
-        const images = carousel.querySelectorAll(".carousel-images img");
-        const dots = carousel.querySelectorAll(".carousel-indicators .dot");
-        const leftArrow = carousel.querySelector(".carousel-arrow.left");
-        const rightArrow = carousel.querySelector(".carousel-arrow.right");
-
-        let currentIndex = 0;
-        const totalImages = images.length;
-
-        function updateCarousel(index) {
-            imagesContainer.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle("active", i === index);
-            });
-        }
-
-        function goToNext() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            updateCarousel(currentIndex);
-        }
-
-        function goToPrev() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            updateCarousel(currentIndex);
-        }
-
-        dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                currentIndex = i;
-                updateCarousel(currentIndex);
-            });
-        });
-
-        leftArrow.addEventListener("click", goToPrev);
-        rightArrow.addEventListener("click", goToNext);
-
-        // Défilement automatique toutes les 5 secondes
-        setInterval(goToNext, 5000);
-
-        updateCarousel(currentIndex);
-    }
+    // Initialiser le carrousel
+    showImage(currentIndex);
 });
-
-
