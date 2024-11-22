@@ -76,6 +76,7 @@ carousels.forEach(carousel => {
 
     const images = carousel.querySelectorAll('.carousel-images img');
     const dots = carousel.querySelectorAll('.carousel-indicators .dot');
+    console.log(dots)
     const carouselImages = carousel.querySelector('.carousel-images');
     const leftArrow = carousel.querySelector('.carousel-arrow.left');
     const rightArrow = carousel.querySelector('.carousel-arrow.right');

@@ -16,7 +16,7 @@
         <nav class="top-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="projects.html">Etudes</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="#personal">Personnel</a></li>
             </ul>
@@ -30,7 +30,7 @@
         <div class="sidebar-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="projects.html">Projets</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="#personal">Personnel</a></li>
             </ul>
@@ -40,7 +40,7 @@
     <!-- Contenu principal -->
     <main class="main-content">
         <!-- En-tête de la page -->
-        <section class="page-header full-width-banner">
+        <section class="page-header full-width-banner banner-exp">
             <div class="banner-overlay">
                 <h1 class="page-title">Mes Expériences</h1>
             </div>
@@ -48,42 +48,127 @@
 
         <!-- Bloc de description -->
         <section class="description-block">
-            <p>Bienvenue sur la page de mes expériences. Découvrez mes stages, mes emplois et mes projets de recherche passés.</p>
+            <p>Bienvenue sur la page de mes expériences. Découvrez mes stages, mes emplois et mes expériences de bénévolat passés.</p>
             <div class="image-banner">
-                <div class ="banner-image" data-title = "Project Title 1" data-target="exp1-block">
-                    <img src="images/experiences/experiences_goggo.jpeg" alt="Expérience 1">
+                <div class ="banner-image" data-title = "[Stage] R&D Data Scientist à Mentech Innovation" data-target="exp1-block">
+                    <img src="images/experiences/experiences_mentech.png" alt="Expérience 1">
                 </div>
-                <div class ="banner-image" data-title = "Project Title 2" data-target="exp2-block">
-                    <img src="images/experiences/experiences_mentech.png" alt="Expérience 2">
+                <div class ="banner-image" data-title = "[Stage + CDD] Management de projet dans la logistique avec des véhicules autonomes à Goggo Network" data-target="exp2-block">
+                    <img src="images/experiences/experiences_goggo.jpg" alt="Expérience 2">
                 </div>
-                <div class ="banner-image" data-title = "Project Title 3" data-target="exp3-block">
-                    <img src="images/experiences/experiences_diffusion.png" alt="Expérience 3">
+                <div class ="banner-image" data-title = "[Bénévolat] WWOOFing dans un ranch en Suède" data-target="exp3-block">
+                    <img src="images/experiences/experiences_suede.jpg" alt="Expérience 3">
                 </div>
             </div>
         </section>
 
         <!-- Blocs d'expériences -->
         <section id="exp1-block" class="experience-block">
-            <img src="images/experiences/experiences_goggo.jpeg" alt="Expérience 1" class="exp-image left">
+            <div class="carousel exp left">
+                <div class="carousel-images">
+                    <img src="images/experiences/mentech/mentech_1.jpg" alt="Image 1">
+                    <img src="images/experiences/mentech/mentech_2.png" alt="Image 2">
+                    <img src="images/experiences/mentech/mentech_3.png" alt="Image 3">
+                    <img src="images/experiences/mentech/mentech_4.png" alt="Image 4">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
             <div class="exp-text">
-                <h2>Stage en R&D</h2>
-                <p>J'ai travaillé sur des projets innovants en recherche et développement dans le domaine de l'IA et de la vision par ordinateur.</p>
+                <h2>[Stage] R&D Data Scientist à Mentech Innovation</h2>
+                <h3>Mai 2024 - Septembre 2024 | Eindhoven, Pays-Bas</h3>
+                <p>Mentech Innovation est une société dont l'objectif est d'améliorer la qualité de vie des personnes vulnérables, en particulier les personnes souffrant de démences et de handicaps mentaux. Pour cela elle s'appuie sur sa plateforme Hume, permettant la détection prématurée de crises de stress grâce à l'utilisation de capteurs corporels couplés à des algorithmes prédictifs basés sur les données physiologiques.</p>
+                <br>
+                <p><b>Projet : </b>Le projet servait de Proof-Of-Concept dans l'établissment de modèles d'IA permettant de passer de la détection à l'intervention automatisée dans la gestion du stress du patient. L'objectif du modèle était de trouver la meilleure politique d'intervention (fréquence et timing) selon le profil du patient et son état de stress.</p>
+                <p><b>Tâches : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Réalisation d'une analyse exploratoire des sources de données disponibles au sein de l'entreprise.</li>
+                        <li>Construction d'un dataset dédié à partir de données extraites de tests cliniques.</li>
+                        <li>Conception, entrainement et évaluation d'un prototype de modèle combinant l'apprentissage non supervisé, l'apprentissage par renforcement et les réseaux de neurones récurrents (LSTM, Transformers).</li>
+                    </ul>
+                </p>
+                <p><b>Technologies & Compétences: </b>Python, PyTorch, Numpy, Pandas, Hugging Face Transformers, CUDA, Apprentissage non supervisé, Apprentissage par renforcement, AutoEncoders, Transformers, LSTM, Revue de littérature scientifique, LaTeX, Présentation à un public varié.</p>
+                <p><b>Liens utiles : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://mentechinnovation.eu/en/home_en/">Site web de l'entreprise</a></li>
+                        <li><a href="https://drive.google.com/file/d/1zlLX-pAhSbxPNDHtp-26-fttbjt1okH6/view?usp=sharing">Mon rapport de Projet de Fin d'Etudes</a></li>
+                        <li><a href="https://drive.google.com/file/d/1c5KGTGcPS3YKrJ1cPpgTNgI03-kMDOv-/view?usp=sharing">Le support de présentation pour la première soutenance</a></li>
+                        <li><a href="https://drive.google.com/file/d/1zfIKYZcpJS4UMXAZxlu6_JFWqC9VjyzB/view?usp=sharing">Le support de présentation pour la seconde soutenance</a></li>
+                    </ul>
+                </p>
             </div>
         </section>
 
         <section id="exp2-block" class="experience-block">
-            <img src="images/experiences/experiences_mentech.png" alt="Expérience 2" class="exp-image right">
+            <div class="carousel exp right">
+                <div class="carousel-images">
+                    <img src="images/experiences/goggo/goggo_1.jpg" alt="Image 1">
+                    <img src="images/experiences/goggo/goggo_2.jpg" alt="Image 2">
+                    <img src="images/experiences/goggo/goggo_3.jpg" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
             <div class="exp-text">
-                <h2>Consultant Data</h2>
-                <p>En tant que consultant, j'ai aidé plusieurs entreprises à implémenter des solutions basées sur les données pour améliorer leurs performances.</p>
+                <h2>[Stage + CDD] Management de projet dans la logistique avec des véhicules autonomes à Goggo Network</h2>
+                <h3>Septembre 2022 - Avril 2023 | Paris, France</h3>
+                <p>Goggo Network est une Start-up Espagnole dont l'objectif est la création et l'opération de réseaux de mobilités autonomes. Après avoir assisté les instances gouvernementales dans l'établissement d'un cadre réglementaire pour l'utilisation des véhicules autonomes en Europe, Goggo Network a lancé plusieurs services de livraisons à partir de 2022, opérant des véhicules autonomes allant du "robot-trottoir", se déplaçant jusqu'à 5 km/h sur la voie piétonne, au véhicule de logistique se déplaçant jusqu'à 50km/h sur route ouverte et en traffic mixte.</p>
+                <br>
+                <p><b>Projet : </b>J'ai occupé ce poste pendant mon année de césure. Bien que j'ai eu l'occasion de participer à plusieurs projets au cours de cette expérience, la majeur partie de ma contribution a été sur le projet "Carrefour Drive Mobile". Celui-ci consistait à faire de la livraison de courses en tournée avec un véhicule 100% autonome équipé de casiers connectés s'arrêtant à des points d'intérêts. Une première européenne, avec une forte couverture médiatique (13h France 2, 13h TF1, Le Figaro...) et une présentation par M. Christophe Béchu (Ministre de la Transition écologique et de la Cohésion des territoires) et M. Alexandre Bompard (PDG Carrefour).</p>
+                <p><b>Tâches : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Conception de projets pilotes, sécurisation du déploiement et des lancements de services avec les partenaires et les clients.</li>
+                        <li>Analyse des performances et amélioration continue des services et processus.</li>
+                        <li>Product owning des interfaces utilisateurs, opérateurs et clients du service.</li>
+                        <li>Communication de l'avancement des projets avec les partenaires, potentiels partenaires/clients et membres de l'équipe.</li>
+                    </ul></p>
+                <p><b>Technologies & Compétences: </b>Communication, Rigueur, Autonomie, Esprit créatif, Analyse de données, Résolution de problèmes, Méthodes Agile, Plannification et Gestion de projet.</p>
+                <p><b>Liens utiles : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://goggonetwork.mysites.io/">Site web de l'entreprise</a></li>
+                        <li><a href="https://www.tf1info.fr/high-tech/video-le-groupe-carrefour-teste-la-livraison-par-vehicule-autonome-dans-l-essonne-une-premiere-en-france-2241017.html">Le reportage de TF1</a></li>
+                    </ul>
+                </p>
             </div>
         </section>
 
         <section id="exp3-block" class="experience-block">
-            <img src="images/experiences/experiences_diffusion.png" alt="Expérience 3" class="exp-image left">
+            <div class="carousel exp left">
+                <div class="carousel-images">
+                    <img src="images/experiences/suede/suede_1.jpg" alt="Image 1">
+                    <img src="images/experiences/suede/suede_2.jpg" alt="Image 2">
+                    <img src="images/experiences/suede/suede_3.jpg" alt="Image 3">
+                    <img src="images/experiences/suede/suede_4.jpg" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
             <div class="exp-text">
-                <h2>Projet de recherche</h2>
-                <p>Ce projet portait sur l'application des modèles de diffusion pour la génération d'images de haute qualité.</p>
+                <h2>[Bénévolat] WWOOFing dans un ranch en Suède</h2>
+                <h3>Mai 2023 - Août 2023 | Ekjsö, Suède</h3>
+                <br>
+                <p>Le WWOOFing (World Wide Opportunities on Organic Farms) est une forme de volontariat où des particuliers travaillent bénévolement dans des fermes en échange de l'hébergement, de la nourriture et d'une expérience éducative sur l'agriculture durable. Dans mon cas j'ai effectué mon expérience dans un ranch avec des chevaux et des canards, vendant des produits locaux et servant également de maison d'hôte. Je m'occupais principalement des animaux, de la rénovation de la grange, de la tenue du jardin et des champs et de l'acceuil des clients.</p>
             </div>
         </section>
     </main>
@@ -96,16 +181,16 @@
             <h3>Expériences</h3>
             <ul>
                 <li><a href="#exp1-block">Stage en R&D</a></li>
-                <li><a href="#exp2-block">Consultant Data</a></li>
-                <li><a href="#exp3-block">Projet de recherche</a></li>
+                <li><a href="#exp2-block">Management de projet</a></li>
+                <li><a href="#exp3-block">WWOOFing dans un ranch</a></li>
             </ul>
         </div>
         <div class="footer-column">
-            <h3>Projets</h3>
+            <h3>Etudes & Projets</h3>
             <ul>
-                <li><a href="#project1">Application IA</a></li>
-                <li><a href="#project2">Site web personnel</a></li>
-                <li><a href="#project3">Outil de visualisation</a></li>
+                <li><a href="projects.html#proj1-block">Mines Nancy</a></li>
+                <li><a href="projects.html#proj2-block">Université de Lorraine</a></li>
+                <li><a href="projects.html#proj3-block">CPGE Joffre</a></li>
             </ul>
         </div>
         <div class="footer-column">
