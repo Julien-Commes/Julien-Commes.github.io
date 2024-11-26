@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/profile.jpg">
+    <title>Experiences</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <!-- Barre du haut -->
+    <div class="top-bar">
+        <button class="toggle-sidebar" id="toggleSidebar">
+            &#9776; <!-- Icône hamburger -->
+        </button>
+        <nav class="top-lang">
+            <a href="../experiences.html"><b>FR</b></a>
+            <a href="experiences.html"><b>EN</b></a>
+        </nav>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Education</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="#personal">Personnal</a></li>
+            </ul>
+        </nav>
+        <button class="contact-button">Contact me</button>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <img src="../images/profile.jpg" alt="Profile Picture" class="profile-picture">
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Education</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="#personal">Personnal</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/julien-commes-a74b63210/" target="_blank" class="social-icon">
+                <img src="../images/linkedin_ivory.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/Julien-Commes" target="_blank" class="social-icon">
+                <img src="../images/github_ivory.png" alt="Github">
+            </a>
+            <a href="mailto:julien.commes.pro@gmail.com" target="_blank" class="social-icon">
+                <img src="../images/gmail_ivory.png" alt="Gmail">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <!-- En-tête de la page -->
+        <section class="page-header full-width-banner banner-exp">
+            <div class="banner-overlay">
+                <h1 class="page-title">My Experiences</h1>
+            </div>
+        </section>
+
+        <!-- Bloc de description -->
+        <section class="description-block">
+            <p>Welcome to the experiences page. Find out about my past internships, jobs and volunteering experiences.</p>
+            <div class="image-banner">
+                <div class ="banner-image" data-title = "[Internship] R&D Data Scientist at Mentech Innovation" data-target="exp1-block">
+                    <img src="../images/experiences/experiences_mentech.png" alt="Expérience 1">
+                </div>
+                <div class ="banner-image" data-title = "[Internship + Short-term] Project management in logistics with autonomous vehicles at Goggo Network" data-target="exp2-block">
+                    <img src="../images/experiences/experiences_goggo.jpg" alt="Expérience 2">
+                </div>
+                <div class ="banner-image" data-title = "[Volunteering] WWOOFing in a ranch in Sweden" data-target="exp3-block">
+                    <img src="../images/experiences/experiences_suede.jpg" alt="Expérience 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Blocs d'expériences -->
+        <section id="exp1-block" class="experience-block">
+            <div class="carousel exp left">
+                <div class="carousel-images">
+                    <img src="../images/experiences/mentech/mentech_1.jpg" alt="Image 1">
+                    <img src="../images/experiences/mentech/mentech_2.png" alt="Image 2">
+                    <img src="../images/experiences/mentech/mentech_3.png" alt="Image 3">
+                    <img src="../images/experiences/mentech/mentech_4.png" alt="Image 4">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="exp-text">
+                <h2>[Internship] R&D Data Scientist at Mentech Innovation</h2>
+                <h3>May 2024 - September 2024 | Eindhoven, The Netherlands</h3>
+                <p>Mentech Innovation is a company whose aim is to improve the quality of life of vulnerable people, particularly those suffering from dementia and mental disabilities. To achieve this, it uses its Hume platform, which enables the early detection of stress attacks through the use of body sensors coupled with predictive algorithms based on physiological data.</p>
+                <br>
+                <p><b>Project: </b>The project served as a Proof-Of-Concept in the establishment of AI models enabling the transition from detection to automated intervention in the management of patient stress. The aim of the model was to find the best intervention policy (frequency and timing) according to the patient's profile and state of stress.</p>
+                <p><b>Tasks: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Carrying out an exploratory analysis of the data sources available within the company.</li>
+                        <li>Construction of a dedicated dataset from data extracted from clinical tests.</li>
+                        <li>Design, training and evaluation of a prototype model combining unsupervised learning, reinforcement learning and recurrent neural networks (LSTM, Transformers).</li>
+                    </ul>
+                </p>
+                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Pandas, Hugging Face Transformers, CUDA, Unsupervised learning, Reinforcement learning, AutoEncoders, Transformers, LSTM, Review of the scientific literature, LaTeX.</p>
+                <p><b>Useful links : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://mentechinnovation.eu/en/home_en/">Company website</a></li>
+                        <li><a href="https://drive.google.com/file/d/1zlLX-pAhSbxPNDHtp-26-fttbjt1okH6/view?usp=sharing">Master Thesis</a></li>
+                        <li><a href="https://drive.google.com/file/d/1c5KGTGcPS3YKrJ1cPpgTNgI03-kMDOv-/view?usp=sharing">First defence slides</a></li>
+                        <li><a href="https://drive.google.com/file/d/1zfIKYZcpJS4UMXAZxlu6_JFWqC9VjyzB/view?usp=sharing">Second defence slides</a></li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="exp2-block" class="experience-block">
+            <div class="carousel exp right">
+                <div class="carousel-images">
+                    <img src="../images/experiences/goggo/goggo_1.jpg" alt="Image 1">
+                    <img src="../images/experiences/goggo/goggo_2.jpg" alt="Image 2">
+                    <img src="../images/experiences/goggo/goggo_3.jpg" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="exp-text">
+                <h2>[Internship + Short-term] Project management in logistics with autonomous vehicles at Goggo Network</h2>
+                <h3>September 2022 - April 2023 | Paris, France</h3>
+                <p>Goggo Network is a Spanish start-up dedicated to the creation and operation of autonomous mobility networks. After assisting government bodies in establishing a regulatory framework for the use of autonomous vehicles in Europe, Goggo Network has launched several delivery services from 2022 onwards, operating autonomous vehicles ranging from 'sidewalk robots' travelling at up to 5km/h in pedestrian traffic to logistics vehicles travelling at up to 50km/h on open roads and in mixed traffic.</p>
+                <br>
+                <p><b>Project: </b>I held this position during my gap year. Although I had the opportunity to take part in several projects during that time, the bulk of my contribution was to the ‘Carrefour Drive Mobile’ project. This involved delivering groceries on the road with a 100% autonomous vehicle equipped with connected lockers stopping at points of interest. This was a European first, with extensive media coverage (13h France 2, 13h TF1, Le Figaro, etc.) and a presentation by Mr Christophe Béchu (Minister for Ecological Transition and Territorial Cohesion) and Mr Alexandre Bompard (Carrefour CEO).</p>
+                <p><b>Tasks: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Designing pilot projects, securing deployment and service launches with partners and customers.</li>
+                        <li>Performance analysis and continuous improvement of services and processes.</li>
+                        <li>Product owning of the service's user, operator and customer interfaces.</li>
+                        <li>Communicating project progress with partners, potential partners/clients and team members.</li>
+                    </ul></p>
+                <p><b>Technologies & Skills: </b>Communication, rigour, autonomy, creativity, data analysis, problem solving, Agile methods, planning and project management.</p>
+                <p><b>Useful links : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://goggonetwork.mysites.io/">Company website</a></li>
+                        <li><a href="https://www.tf1info.fr/high-tech/video-le-groupe-carrefour-teste-la-livraison-par-vehicule-autonome-dans-l-essonne-une-premiere-en-france-2241017.html">TF1 report</a></li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="exp3-block" class="experience-block">
+            <div class="carousel exp left">
+                <div class="carousel-images">
+                    <img src="../images/experiences/suede/suede_1.jpg" alt="Image 1">
+                    <img src="../images/experiences/suede/suede_2.jpg" alt="Image 2">
+                    <img src="../images/experiences/suede/suede_3.jpg" alt="Image 3">
+                    <img src="../images/experiences/suede/suede_4.jpg" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="exp-text">
+                <h2>[Volunteering] WWOOFing in a ranch in Sweden</h2>
+                <h3>May 2023 - August 2023 | Ekjsö, Sweden</h3>
+                <br>
+                <p>WWOOFing (World Wide Opportunities on Organic Farms) is a form of volunteering where individuals work as volunteers on farms in exchange for accommodation, food and an educational experience about sustainable agriculture. In my case, I worked on a ranch with horses and ducks, selling local produce and also serving as a guest house. I mainly looked after the animals, renovated the barn, tended the garden and fields and welcomed guests.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Experiences</h3>
+            <ul>
+                <li><a href="#exp1-block">R&D Internship</a></li>
+                <li><a href="#exp2-block">Project Management</a></li>
+                <li><a href="#exp3-block">WWOOFing in a ranch</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Education & Projects</h3>
+            <ul>
+                <li><a href="projects.html#proj1-block">Mines Nancy</a></li>
+                <li><a href="projects.html#proj2-block">Université de Lorraine</a></li>
+                <li><a href="projects.html#proj3-block">CPGE Joffre</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Personnal</h3>
+            <ul>
+                <li><a href="#personal1">Centres d'intérêt</a></li>
+                <li><a href="#personal2">Voyages</a></li>
+                <li><a href="#personal3">Volontariat</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>

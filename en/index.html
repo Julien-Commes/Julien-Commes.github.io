@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/profile.jpg">
+    <title>Home</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Barre du haut -->
+    <div class="top-bar">
+        <button class="toggle-sidebar" id="toggleSidebar">
+            &#9776; <!-- Icône hamburger -->
+        </button>
+        <nav class="top-lang">
+            <a href="../index.html"><b>FR</b></a>
+            <a href="index.html"><b>EN</b></a>
+        </nav>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Education</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="#personal">Personnal</a></li>
+            </ul>
+        </nav>
+        <a href="mailto:julien.commes.pro@gmail.com" class="contact-button">Contact me</a>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <img src="../images/profile.jpg" alt="Profile Picture" class="profile-picture">
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Education</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="#personal">Personnal</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/julien-commes-a74b63210/" target="_blank" class="social-icon">
+                <img src="../images/linkedin_ivory.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/Julien-Commes" target="_blank" class="social-icon">
+                <img src="../images/github_ivory.png" alt="Github">
+            </a>
+            <a href="mailto:julien.commes.pro@gmail.com" target="_blank" class="social-icon">
+                <img src="../images/gmail_ivory.png" alt="Gmail">
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section class="home">
+            <img src="../images/profile.jpg" alt="Profile Picture" class="profile-picture main-profile">
+            <h2>Welcome to my website</h2>
+            <p>Here is a presentation of my professional and academic career.</p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/julien-commes-a74b63210/" target="_blank" class="social-icon">
+                    <img src="../images/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/Julien-Commes" target="_blank" class="social-icon">
+                    <img src="../images/github.png" alt="Github">
+                </a>
+                <a href="mailto:julien.commes.pro@gmail.com" target="_blank" class="social-icon">
+                    <img src="../images/gmail.png" alt="Gmail">
+                </a>
+            </div>
+        </section>
+        <!-- Section 1 -->
+        <div class="section" id="projects">
+            <div class = "section-overlay">
+                <h1>Educational background and projects</h1>
+                <p>Discover the syllabus of my studies, the technologies I've worked on and the personal projects I'm developing as part of my training.</p>
+            </div>
+        </div>
+
+        <div class="section-content" id="projects-content">
+            <div class="carousel left">
+                <div class="carousel-images">
+                    <img src="../images/projects/mines/mines_2.png" alt="Image 1">
+                    <img src="../images/projects/ul/ul_1.PNG" alt="Image 2">
+                    <img src="../images/projects/education_joffre.jpg" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="section-text">
+                <h2>I completed and graduated from the following programmes:</h2>
+                <br>
+                <ul class="indented-list home-list">
+                    <li><b>[Mines Nancy] Computer Science Department - Artificial Intelligent Systems Programme | 2020 - 2024</b></li>
+                    <li><b>[Université de Lorraine] Master 2 Computer Science - Learning, Vision and Robotics Programme | 2023 - 2024</b></li>
+                    <li><b>[CPGE Joffre] PCSI/PSI* | 2018 - 2020</b></li>
+                </ul>
+                <br>
+                <a href="projects.html">Find out more</a>
+            </div>
+        </div>
+        <div class="section" id="experiences">
+            <div class = "section-overlay">
+                <h1>Experiences</h1>
+                <p>Find out about my past internships, jobs and volunteering experiences.</p>
+            </div>
+        </div>
+        <div class="section-content" id="experiences-content">
+            <div class="carousel right">
+                <div class="carousel-images">
+                    <img src="../images/experiences/experiences_mentech.png" alt="Image 1">
+                    <img src="../images/experiences/experiences_goggo.jpg" alt="Image 2">
+                    <img src="../images/experiences/experiences_suede.jpg" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="section-text">
+                <h2>I had several experiences such as:</h2>
+                <br>
+                <ul class="indented-list home-list">
+                    <li><b>[Internship] R&D Data Scientist at Mentech Innovation</b></li>
+                    <li><b>[Internship + Short-term] Project management in logistics with autonomous vehicles at Goggo Network</b></li>
+                    <li><b>[Volunteering] WWOOFing in a ranch in Sweden</b></li>
+                </ul>
+                <br>
+                <a href="experiences.html">Find out more</a>
+            </div>
+        </div>
+        <div class="section" id="personal">
+            <div class = "section-overlay">
+                <h1>Personnal</h1>
+                <p>Find out more about my activities, passions and values</p>
+            </div>
+        </div>
+        <div class="section-content" id="personal-content">
+            <div class="section-text">
+                <p>This section is under construction!</p>
+            </div>
+        </div>
+    
+        <!-- Ajoute d'autres sections ici -->
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Expériences</h3>
+            <ul>
+                <li><a href="experiences.html#exp1-block">R&D Internship</a></li>
+                <li><a href="experiences.html#exp2-block">Project Management</a></li>
+                <li><a href="experiences.html#exp3-block">WWOOFing in a ranch</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Etudes & Projets</h3>
+            <ul>
+                <li><a href="projects.html#proj1-block">Mines Nancy</a></li>
+                <li><a href="projects.html#proj2-block">Université de Lorraine</a></li>
+                <li><a href="projects.html#proj3-block">CPGE Joffre</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Personnal</h3>
+            <ul>
+                <li><a href="#personal1">Centres d'intérêt</a></li>
+                <li><a href="#personal2">Voyages</a></li>
+                <li><a href="#personal3">Volontariat</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -46,6 +46,11 @@ body {
     margin-right: auto;
 }
 
+.top-lang {
+    margin-left: 30px;
+    margin-right: auto;
+}
+
 /* Navigation */
 .top-nav {
     margin-right: 50px;
