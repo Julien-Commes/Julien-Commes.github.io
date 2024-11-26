@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Personnel</title>
+    <link rel="icon" href="images/profile.jpg">
+    <title>Accueil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <li><a href="#personal">Personnel</a></li>
             </ul>
         </nav>
-        <button class="contact-button">Contact</button>
+        <a href="mailto:julien.commes.pro@gmail.com" class="contact-button">Contact</a>
     </div>
 
     <!-- Sidebar -->
@@ -30,30 +31,57 @@
         <div class="sidebar-nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="projects.html">Projets</a></li>
+                <li><a href="projects.html">Etudes</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="#personal">Personnel</a></li>
             </ul>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/julien-commes-a74b63210/" target="_blank" class="social-icon">
+                <img src="images/linkedin_ivory.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/Julien-Commes" target="_blank" class="social-icon">
+                <img src="images/github_ivory.png" alt="Github">
+            </a>
+            <a href="mailto:julien.commes.pro@gmail.com" target="_blank" class="social-icon">
+                <img src="images/gmail_ivory.png" alt="Gmail">
+            </a>
         </div>
     </div>
 
     <div class="main-content">
         <section class="home">
+            <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture main-profile">
             <h2>Bienvenue sur mon site</h2>
             <p>Voici une présentation de mon parcours professionnel et académique.</p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/julien-commes-a74b63210/" target="_blank" class="social-icon">
+                    <img src="images/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/Julien-Commes" target="_blank" class="social-icon">
+                    <img src="images/github.png" alt="Github">
+                </a>
+                <a href="mailto:julien.commes.pro@gmail.com" target="_blank" class="social-icon">
+                    <img src="images/gmail.png" alt="Gmail">
+                </a>
+            </div>
         </section>
         <!-- Section 1 -->
         <div class="section" id="projects">
-            <h1>Parcours académique</h1>
-            <p>Ajouter une description</p>
+            <div class = "section-overlay">
+                <h1>Parcours académique et projets</h1>
+                <p>Découvrez le syllabus de mes études, les technologies que j'y ai manipulé ainsi que les projets personnels que je développe pour me former.</p>
+            </div>
         </div>
 
         <div class="section-content" id="projects-content">
             <div class="carousel left">
                 <div class="carousel-images">
-                    <img src="images/experiences/experiences_diffusion.png" alt="Image 1">
-                    <img src="images/experiences/experiences_goggo.jpeg" alt="Image 2">
-                    <img src="images/experiences/experiences_mentech.png" alt="Image 3">
+                    <img src="images/projects/mines/mines_2.png" alt="Image 1">
+                    <img src="images/projects/ul/ul_1.PNG" alt="Image 2">
+                    <img src="images/projects/education_joffre.jpg" alt="Image 3">
                 </div>
                 <button class="carousel-arrow left">&#10094;</button>
                 <button class="carousel-arrow right">&#10095;</button>
@@ -64,12 +92,22 @@
                 </div>
             </div>
             <div class="section-text">
-                <p>BBBBBBBBBBBBB</p>
+                <h2>J'ai suivi et ai obtenu le diplôme des formations suivantes :</h2>
+                <br>
+                <ul class="indented-list home-list">
+                    <li><b>[Mines Nancy] Département Informatique - Parcours Artificial Intelligent Systems | 2020 - 2024</b></li>
+                    <li><b>[Université de Lorraine] Master 2 Informatique - Parcours Apprentissage, Vision, Robotique | 2023 - 2024</b></li>
+                    <li><b>[CPGE Joffre] PCSI/PSI* | 2018 - 2020</b></li>
+                </ul>
+                <br>
+                <a href="projects.html">En savoir plus</a>
             </div>
         </div>
         <div class="section" id="experiences">
-            <h1>Expériences</h1>
-            <p>Découvrez mes stages, mes emplois et mes expériences de bénévolat passés.</p>
+            <div class = "section-overlay">
+                <h1>Expériences</h1>
+                <p>Découvrez mes stages, mes emplois et mes expériences de bénévolat passés.</p>
+            </div>
         </div>
         <div class="section-content" id="experiences-content">
             <div class="carousel right">
@@ -99,13 +137,14 @@
             </div>
         </div>
         <div class="section" id="personal">
-            <h1>Personnel</h1>
-            <p>Pour en savoir plus sur mes activités, passions, valeurs</p>
+            <div class = "section-overlay">
+                <h1>Personnel</h1>
+                <p>Pour en savoir plus sur mes activités, passions, valeurs</p>
+            </div>
         </div>
         <div class="section-content" id="personal-content">
-            <img src="images/no_image.jpg" alt="Image pour la section 1" class="section-image left">
             <div class="section-text">
-                <p>BBBBBBBBBBBBB</p>
+                <p>Cette section est en cours de construction !</p>
             </div>
         </div>
     
