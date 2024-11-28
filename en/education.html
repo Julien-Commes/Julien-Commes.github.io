@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/profile.jpg">
+    <title>Educational Background</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <!-- Barre du haut -->
+    <div class="top-bar">
+        <button class="toggle-sidebar" id="toggleSidebar">
+            &#9776; <!-- Icône hamburger -->
+        </button>
+        <nav class="top-lang">
+            <a href="../education.html"><b>FR</b></a>
+            <a href="education.html"><b>EN</b></a>
+        </nav>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#personal">Personal</a></li>
+            </ul>
+        </nav>
+        <button class="contact-button">Contact me</button>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <img src="../images/profile.jpg" alt="Profile Picture" class="profile-picture">
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experiences.html">Experiences</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#personal">Personal</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/julien-commes-a74b63210/" target="_blank" class="social-icon">
+                <img src="../images/linkedin_ivory.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/Julien-Commes" target="_blank" class="social-icon">
+                <img src="../images/github_ivory.png" alt="Github">
+            </a>
+            <a href="mailto:julien.commes.pro@gmail.com" target="_blank" class="social-icon">
+                <img src="../images/gmail_ivory.png" alt="Gmail">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <!-- En-tête de la page -->
+        <section class="page-header full-width-banner banner-proj">
+            <div class="banner-overlay">
+                <h1 class="page-title">Educational Background</h1>
+            </div>
+        </section>
+
+        <!-- Bloc de description -->
+        <section class="description-block">
+            <p>Welcome to the page presenting my studies. Discover the syllabus of my studies and the technologies I've worked on.</p>
+            <div class="image-banner">
+                <div class ="banner-image" data-title = "[Mines Nancy] Computer Science Department - Artificial Intelligent Systems Programme" data-target="ed1-block">
+                    <img src="../images/education/education_mines.jpg" alt="Expérience 1">
+                </div>
+                <div class ="banner-image" data-title = "[Université de Lorraine] Master 2 Computer Science - Learning, Vision and Robotics Programme" data-target="ed2-block">
+                    <img src="../images/education/education_ul.jpg" alt="Expérience 2">
+                </div>
+                <div class ="banner-image" data-title = "[CPGE Joffre] PCSI/PSI*" data-target="ed3-block">
+                    <img src="../images/education/education_joffre.jpg" alt="Expérience 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Blocs d'expériences -->
+        <section id="ed1-block" class="experience-block">
+            <div class="carousel exp left">
+                <div class="carousel-images">
+                    <img src="../images/education/mines/mines_0.jpg" alt="Image 1">
+                    <img src="../images/education/mines/mines_1.png" alt="Image 2">
+                    <img src="../images/education/mines/mines_2.png" alt="Image 3">
+                    <img src="../images/education/mines/mines_3.png" alt="Image 4">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="exp-text">
+                <h2>[Mines Nancy] Computer Science Department - Artificial Intelligent Systems Programme</h2>
+                <h3>September 2020 - September 2024 | Nancy, France</h3>
+                <p>Les Mines Nancy, a prestigious engineering school in the Mines-Télécom group, trains general engineers with strong expertise in science, technology and management. Renowned for its academic excellence and links with industry, it offers specialisations in innovative fields such as energy, materials and artificial intelligence.</p>
+                <br>
+                <p><b>Relevant coursework: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Machine Learning and differentiable programming : CNN, RNN, Transformers, LLMs, Evaluation methods, Scaling laws, Uncertainty in Deep Learning</li>
+                        <li>Scalable architectures & parallel computing : Parallel algorithms, Software architectures, Scalability, Elasticity</li>
+                        <li>Software Engineering.</li>
+                        <li>Statistical Inference.</li>
+                        <li>Data Analysis.</li>
+                        <li>Image processing.</li>
+                    </ul>
+                </p>
+                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Pandas, Git, Linux environments, SQL, Docker, Matlab, SQL, R, JavaScript, HTML, CUDA, Supervised learning, Unsupervised learning, LLM.</p>
+                <p><b>Useful links: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://mines-nancy.univ-lorraine.fr/">School website</a></li>
+                        <li><a href="https://github.com/Julien-Commes/_DL_Mini-project">My mini-project of Machine Learning (Video frame interpolation)</a></li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="proj2-block" class="experience-block">
+            <div class="carousel exp right">
+                <div class="carousel-images">
+                    <img src="../images/education/ul/ul_0.jpg" alt="Image 1">
+                    <img src="../images/education/ul/ul_1.PNG" alt="Image 2">
+                    <img src="../images/education/ul/ul_2.png" alt="Image 3">
+                    <img src="../images/education/ul/ul_3.png" alt="Image 3">
+                    <img src="../images/education/ul/ul_4.png" alt="Image 3">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="exp-text">
+                <h2>[Université de Lorraine] Master 2 Computer Science - Learning, Vision and Robotics Programme</h2>
+                <h3>September 2023 - September 2024 | Nancy, France</h3>
+                <p>I took this programme as a double degree in my final year of study to deepen my technical knowledge in the field of Machine Learning and Computer Vision. The courses consisted of lectures during which I was able to study how several technologies worked, which I then implemented and tested during practical work. I also had the opportunity to study variants in detail during reviews and presentations of the scientific literature.</p>
+                <br>
+                <p><b>Relevant coursework: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Learning, Reasoning under uncertainty: Neural networks and clustering, Hidden Markov Model and Bayesian network, Markov decision process and Reinforcement learning</li>
+                        <li>Shape Modelling and Recognition: Representation and shape comparison metrics, Linear model and Principal Component Analysis, Estimation methods and robust estimation, Loss and neural networks</li>
+                        <li>Statistical Learning and Model Selection: Statistical learning theory and risk estimation, model selection, variable selection</li>
+                        <li>Image processing: Contour and shape descriptors in images, Segmentation</li>
+                        <li>Multi-modal spoken communication: Automatic Speech Recognition, Text-To-Speech Synthesis</li>
+                        <li>Augmented Reality: Pose estimation, visual odometry, global positioning</li>
+                    </ul>
+                </p>
+                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Scikit-learn, Matlab, C/C++, OpenCV, Supervised learning, Unsupervised learning, Reinforcement learning, Segmentation, Text-to-speech Synthesis, Automatic Speech Recognition, Gaussian splatting, Reviews and presentations of the scientific literature</p>
+                <p><b>Useful links: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://mines-nancy.univ-lorraine.fr/">University website</a></li>
+                        <li><a href="https://arxiv.org/abs/2312.06741">Reviewed and presented literature: Gaussian Splatting SLAM</a></li>
+                        <li><a href="https://arxiv.org/abs/2301.02008">Reviewed and presented literature: Expressive Speech-driven Facial Animation with controllable emotions</a></li>
+                        <li><a href="https://arxiv.org/abs/2001.05566">Reviewed and presented literature: Image Segmentation Using Deep Learning: A Survey</a></li>
+                        <li><a href="https://www.researchgate.net/publication/366459455_Architectures_neuronales_bout-en-bout_pour_la_comprehension_de_la_parole">Reviewed and presented literature: Architectures neuronales bout-en-bout pour la comprehension de la parole (written in French)</a></li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="proj3-block" class="experience-block">
+            <div class="carousel exp left">
+                <div class="carousel-images">
+                    <img src="../images/education/education_joffre.jpg" alt="Image 1">
+                </div>
+            </div>
+            <div class="exp-text">
+                <h2>[CPGE Joffre] PCSI/PSI*</h2>
+                <h3>September 2018 - July 2020  | Montpellier, France</h3>
+                <p>The CPGE (Preparatory Classes for Grandes Écoles) are intensive two-year post-secondary programs preparing students for competitive exams to enter elite engineering schools. The PCSI (Physics, Chemistry, and Engineering Science) and PSI* (Physics and Engineering Science, advanced track) are focused on mathematics, physical sciences, and engineering, with the second year being particularly selective.</p>
+                <br>
+                <p><b>Relevant coursework: </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li>Mathematics: Linear algebra, Real pre-Hilbert spaces, Euclidean spaces, Normal vector spaces, Sequences and series of functions, Integration over any interval, Discrete and continuous random variables, Differential calculus</li>
+                        <li>Physics: Electronics, Transport phenomena, Macroscopic balances, Electromagnetism, Power conversion, Wave physics, Chemical transformations of matter: thermodynamic and kinetic aspects, Thermodynamic and kinetic aspects of electrochemistry</li>
+                        <li>Engineering science: Functional analysis and modelling of systems, Study of materials and dimensioning, Automation and control of systems, Mechanics of non-deformable solids</li>
+                        <li>Computer science: Programming (Python, fundamental algorithms), Data structures (lists, stacks, trees), Introduction to complexity and logic.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Experiences</h3>
+            <ul>
+                <li><a href="experiences.html#exp1-block">R&D Internship</a></li>
+                <li><a href="experiences.html#exp2-block">Project Management</a></li>
+                <li><a href="experiences.html#exp3-block">WWOOFing in a ranch</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Educational Background</h3>
+            <ul>
+                <li><a href="#ed1-block">Mines Nancy</a></li>
+                <li><a href="#ed2-block">Université de Lorraine</a></li>
+                <li><a href="#ed3-block">CPGE Joffre</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Projects</h3>
+            <ul>
+                <li><a href="projects.html#proj1-block">Diffusion model</a></li>
+                <li><a href="projects.html#proj2-block">Personal Website</a></li>
+                <li><a href="projects.html#proj3-block">Video Frame Interpolation</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Personal</h3>
+            <ul>
+                <li><a href="#personal1">Centres d'intérêt</a></li>
+                <li><a href="#personal2">Voyages</a></li>
+                <li><a href="#personal3">Volontariat</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>
