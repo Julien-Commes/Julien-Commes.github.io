@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/profile.jpg">
-    <title>Education & Projects</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js" defer></script>
 </head>
@@ -21,12 +21,13 @@
         <nav class="top-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Education</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="experiences.html">Experiences</a></li>
-                <li><a href="#personal">Personnal</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#personal">Personal</a></li>
             </ul>
         </nav>
-        <button class="contact-button">Contact me</button>
+        <a href="mailto:julien.commes.pro@gmail.com" class="contact-button">Contact me</a>
     </div>
 
     <!-- Sidebar -->
@@ -35,9 +36,10 @@
         <div class="sidebar-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Education</a></li>
+                <li><a href="education.html">Education</a></li>
                 <li><a href="experiences.html">Experiences</a></li>
-                <li><a href="#personal">Personnal</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#personal">Personal</a></li>
             </ul>
         </div>
 
@@ -59,22 +61,22 @@
         <!-- En-tête de la page -->
         <section class="page-header full-width-banner banner-proj">
             <div class="banner-overlay">
-                <h1 class="page-title">Education & Projects</h1>
+                <h1 class="page-title">My Projects</h1>
             </div>
         </section>
 
         <!-- Bloc de description -->
         <section class="description-block">
-            <p>Welcome to the page presenting my studies and projects. Discover the syllabus of my studies, the technologies I've worked on and the personal projects I'm developing as part of my training.</p>
+            <p>Welcome to the page presenting my projects. Discover the details of the projects I have developed with the aim of gaining expertise in some technologies that have caught my attention.</p>
             <div class="image-banner">
-                <div class ="banner-image" data-title = "[Mines Nancy] Computer Science Department - Artificial Intelligent Systems Programme" data-target="proj1-block">
-                    <img src="../images/projects/education_mines.jpg" alt="Expérience 1">
+                <div class ="banner-image" data-title = "[AI] Mini Diffusion Model" data-target="proj1-block">
+                    <img src="../images/projects/projects_mindiff.jpg" alt="Projet 1">
                 </div>
-                <div class ="banner-image" data-title = "[Université de Lorraine] Master 2 Computer Science - Learning, Vision and Robotics Programme" data-target="proj2-block">
-                    <img src="../images/projects/education_ul.jpg" alt="Expérience 2">
+                <div class ="banner-image" data-title = "[Web] My personal Website" data-target="proj2-block">
+                    <img src="../images/projects/projects_web.png" alt="Projet 2">
                 </div>
-                <div class ="banner-image" data-title = "[CPGE Joffre] PCSI/PSI*" data-target="proj3-block">
-                    <img src="../images/projects/education_joffre.jpg" alt="Expérience 3">
+                <div class ="banner-image" data-title = "[AI] Video Frame Interpolation" data-target="proj3-block">
+                    <img src="../images/education/mines/mines_1.png" alt="Projet 3">
                 </div>
             </div>
         </section>
@@ -83,10 +85,9 @@
         <section id="proj1-block" class="experience-block">
             <div class="carousel exp left">
                 <div class="carousel-images">
-                    <img src="../images/projects/mines/mines_0.jpg" alt="Image 1">
-                    <img src="../images/projects/mines/mines_1.png" alt="Image 2">
-                    <img src="../images/projects/mines/mines_2.png" alt="Image 3">
-                    <img src="../images/projects/mines/mines_3.png" alt="Image 4">
+                    <img src="../images/projects/mindiff/mindiff_1.jpg" alt="Image 1">
+                    <img src="../images/projects/mindiff/mindiff_0.jpg" alt="Image 2">
+                    <img src="../images/projects/mindiff/mindiff_2.jpg" alt="Image 3">
                 </div>
                 <button class="carousel-arrow left">&#10094;</button>
                 <button class="carousel-arrow right">&#10095;</button>
@@ -94,80 +95,81 @@
                     <span class="dot active"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
-                    <span class="dot"></span>
                 </div>
             </div>
             <div class="exp-text">
-                <h2>[Mines Nancy] Computer Science Department - Artificial Intelligent Systems Programme</h2>
-                <h3>September 2020 - September 2024 | Nancy, France</h3>
-                <p>Les Mines Nancy, a prestigious engineering school in the Mines-Télécom group, trains general engineers with strong expertise in science, technology and management. Renowned for its academic excellence and links with industry, it offers specialisations in innovative fields such as energy, materials and artificial intelligence.</p>
+                <h2>[AI] Mini Diffusion Model - Demo available below!</h2>
+                <p>Diffusion models are a class of probabilistic generative models that learn to generate data by reversing a process of progressive degradation (diffusion) from noise to real data. They are particularly effective for generating realistic images, videos and even textual data by simulating this process in a controlled, iterative way. They are used in particular by software such as Dall-E or Stable Diffusion.</p>
+                <p>This project is a first experiment to implement a 'mini' diffusion model (these models generally have too many parameters to be developed and trained from scratch by an individual) that generates faces according to physical attribute conditions.</p>
                 <br>
-                <p><b>Relevant coursework: </b>
+                <p><b>Objectives & Contributions: </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Machine Learning and differentiable programming : CNN, RNN, Transformers, LLMs, Evaluation methods, Scaling laws, Uncertainty in Deep Learning</li>
-                        <li>Scalable architectures & parallel computing : Parallel algorithms, Software architectures, Scalability, Elasticity</li>
-                        <li>Software Engineering.</li>
-                        <li>Statistical Inference.</li>
-                        <li>Data Analysis.</li>
-                        <li>Image processing.</li>
+                        <li>Rewriting and local training of a Diffusion Model</li>
+                        <li>Hosting of a model and creation of an online demo interface</li>
+                        <li>Understanding the theoretical framework of diffusion models</li>
                     </ul>
                 </p>
-                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Pandas, Git, Linux environments, SQL, Docker, Matlab, SQL, R, JavaScript, HTML, CUDA, Supervised learning, Unsupervised learning, LLM.</p>
-                <p><b>Useful links: </b>
+                <p><b>Potential next steps: </b>
                     <br>
                     <ul class="indented-list">
-                        <li><a href="https://mines-nancy.univ-lorraine.fr/">School website</a></li>
-                        <li><a href="https://github.com/Julien-Commes/_DL_Mini-project">My mini-project of Machine Learning (Video frame interpolation)</a></li>
+                        <li>Understanding and experimenting with fine-tuning techniques on foundation models (e.g., LoRA)</li>
+                        <li>Implementation and testing of Latent Diffusion</li>
+                        <li>Understanding and experimenting with text-to-image generation techniques</li>
+                    </ul>
+                </p>
+                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Pandas, Git, Gradio, Hugging Face Spaces, CUDA, Diffusion Model, Supervised learning, Unet Architecture.</p>
+                <p><b>Useful links : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://learn.deeplearning.ai/courses/diffusion-models/">The tutorial I used as a starting point</a></li>
+                        <li><a href="https://www.kaggle.com/datasets/jessicali9530/celeba-dataset/">Dataset used for model training</a></li>
+                        <li><a href="https://github.com/Julien-Commes/">Github repository of the project</a></li>
+                        <li><a href="https://arxiv.org/abs/2006.11239">Original publication</a></li>
                     </ul>
                 </p>
             </div>
         </section>
 
+        <script
+	    type="module"
+	    src="https://gradio.s3-us-west-2.amazonaws.com/5.7.0/gradio.js"
+        ></script>
+
+        <gradio-app src="https://julien-commes-diffusion-mini.hf.space" eager="true" theme_mode = "dark"></gradio-app>
+
         <section id="proj2-block" class="experience-block">
             <div class="carousel exp right">
                 <div class="carousel-images">
-                    <img src="../images/projects/ul/ul_0.jpg" alt="Image 1">
-                    <img src="../images/projects/ul/ul_1.PNG" alt="Image 2">
-                    <img src="../images/projects/ul/ul_2.png" alt="Image 3">
-                    <img src="../images/projects/ul/ul_3.png" alt="Image 3">
-                    <img src="../images/projects/ul/ul_4.png" alt="Image 3">
+                    <img src="../images/projects/projects_web.png" alt="Image 1">
+                    <img src="../images/no_image.jpg" alt="Image 2">
                 </div>
                 <button class="carousel-arrow left">&#10094;</button>
                 <button class="carousel-arrow right">&#10095;</button>
                 <div class="carousel-indicators">
                     <span class="dot active"></span>
                     <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
                 </div>
             </div>
             <div class="exp-text">
-                <h2>[Université de Lorraine] Master 2 Computer Science - Learning, Vision and Robotics Programme</h2>
-                <h3>September 2023 - September 2024 | Nancy, France</h3>
-                <p>I took this programme as a double degree in my final year of study to deepen my technical knowledge in the field of Machine Learning and Computer Vision. The courses consisted of lectures during which I was able to study how several technologies worked, which I then implemented and tested during practical work. I also had the opportunity to study variants in detail during reviews and presentations of the scientific literature.</p>
+                <h2>[Web] My personal Website - <b>Work In Progress</b></h2>
+                <p>Courte description</p>
                 <br>
-                <p><b>Relevant coursework: </b>
+                <p><b>Objectifs et contributions : </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Learning, Reasoning under uncertainty: Neural networks and clustering, Hidden Markov Model and Bayesian network, Markov decision process and Reinforcement learning</li>
-                        <li>Shape Modelling and Recognition: Representation and shape comparison metrics, Linear model and Principal Component Analysis, Estimation methods and robust estimation, Loss and neural networks</li>
-                        <li>Statistical Learning and Model Selection: Statistical learning theory and risk estimation, model selection, variable selection</li>
-                        <li>Image processing: Contour and shape descriptors in images, Segmentation</li>
-                        <li>Multi-modal spoken communication: Automatic Speech Recognition, Text-To-Speech Synthesis</li>
-                        <li>Augmented Reality: Pose estimation, visual odometry, global positioning</li>
+                        <li>Objectif 1</li>
+                        <li>Objectif 2</li>
+                        <li>Objectif 3</li>
+                        <li>Objectif 4</li>
                     </ul>
                 </p>
-                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Scikit-learn, Matlab, C/C++, OpenCV, Supervised learning, Unsupervised learning, Reinforcement learning, Segmentation, Text-to-speech Synthesis, Automatic Speech Recognition, Gaussian splatting, Reviews and presentations of the scientific literature</p>
-                <p><b>Useful links: </b>
+                <p><b>Technologies & Compétences: </b>JavaScript, CSS, HTML, Prompt Engineering, Git.</p>
+                <p><b>Liens utiles : </b>
                     <br>
                     <ul class="indented-list">
-                        <li><a href="https://mines-nancy.univ-lorraine.fr/">University website</a></li>
-                        <li><a href="https://arxiv.org/abs/2312.06741">Reviewed and presented literature: Gaussian Splatting SLAM</a></li>
-                        <li><a href="https://arxiv.org/abs/2301.02008">Reviewed and presented literature: Expressive Speech-driven Facial Animation with controllable emotions</a></li>
-                        <li><a href="https://arxiv.org/abs/2001.05566">Reviewed and presented literature: Image Segmentation Using Deep Learning: A Survey</a></li>
-                        <li><a href="https://www.researchgate.net/publication/366459455_Architectures_neuronales_bout-en-bout_pour_la_comprehension_de_la_parole">Reviewed and presented literature: Architectures neuronales bout-en-bout pour la comprehension de la parole (written in French)</a></li>
+                        <li><a href="https://diogotc.com/">Un site qui m'a inspiré pour le design du site</a></li>
+                        <li><a href="https://github.com/Julien-Commes/Julien-Commes.github.io">Le répertoire Github du projet</a></li>
                     </ul>
                 </p>
             </div>
@@ -176,21 +178,27 @@
         <section id="proj3-block" class="experience-block">
             <div class="carousel exp left">
                 <div class="carousel-images">
-                    <img src="../images/projects/education_joffre.jpg" alt="Image 1">
+                    <img src="../images/education/mines/mines_1.png" alt="Image 1">
                 </div>
             </div>
             <div class="exp-text">
-                <h2>[CPGE Joffre] PCSI/PSI*</h2>
-                <h3>September 2018 - July 2020  | Montpellier, France</h3>
-                <p>The CPGE (Preparatory Classes for Grandes Écoles) are intensive two-year post-secondary programs preparing students for competitive exams to enter elite engineering schools. The PCSI (Physics, Chemistry, and Engineering Science) and PSI* (Physics and Engineering Science, advanced track) are focused on mathematics, physical sciences, and engineering, with the second year being particularly selective.</p>
+                <h2>[AI] Video Frame Interpolation - <b>Work In Progress</b></h2>
+                <p>Courte description</p>
                 <br>
-                <p><b>Relevant coursework: </b>
+                <p><b>Objectifs et contributions : </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Mathematics: Linear algebra, Real pre-Hilbert spaces, Euclidean spaces, Normal vector spaces, Sequences and series of functions, Integration over any interval, Discrete and continuous random variables, Differential calculus</li>
-                        <li>Physics: Electronics, Transport phenomena, Macroscopic balances, Electromagnetism, Power conversion, Wave physics, Chemical transformations of matter: thermodynamic and kinetic aspects, Thermodynamic and kinetic aspects of electrochemistry</li>
-                        <li>Engineering science: Functional analysis and modelling of systems, Study of materials and dimensioning, Automation and control of systems, Mechanics of non-deformable solids</li>
-                        <li>Computer science: Programming (Python, fundamental algorithms), Data structures (lists, stacks, trees), Introduction to complexity and logic.</li>
+                        <li>Objectif 1</li>
+                        <li>Objectif 2</li>
+                        <li>Objectif 3</li>
+                        <li>Objectif 4</li>
+                    </ul>
+                </p>
+                <p><b>Technologies & Compétences: </b>Python, PyTorch, Numpy, Git, Interpolation de frame vidéo, Architecture Unet.</p>
+                <p><b>Liens utiles : </b>
+                    <br>
+                    <ul class="indented-list">
+                        <li><a href="https://github.com/Julien-Commes/_DL_Mini-project">Le répertoire Github du projet</a></li>
                     </ul>
                 </p>
             </div>
@@ -210,15 +218,23 @@
             </ul>
         </div>
         <div class="footer-column">
-            <h3>Education & Projects</h3>
+            <h3>Educational Background</h3>
             <ul>
-                <li><a href="#proj1-block">Mines Nancy</a></li>
-                <li><a href="#proj2-block">Université de Lorraine</a></li>
-                <li><a href="#proj3-block">CPGE Joffre</a></li>
+                <li><a href="education.html#ed1-block">Mines Nancy</a></li>
+                <li><a href="education.html#ed2-block">Université de Lorraine</a></li>
+                <li><a href="education.html#ed3-block">CPGE Joffre</a></li>
             </ul>
         </div>
         <div class="footer-column">
-            <h3>Personnal</h3>
+            <h3>Projects</h3>
+            <ul>
+                <li><a href="#proj1-block">Diffusion model</a></li>
+                <li><a href="#proj2-block">Personal Website</a></li>
+                <li><a href="#proj3-block">Video Frame Interpolation</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Personal</h3>
             <ul>
                 <li><a href="#personal1">Centres d'intérêt</a></li>
                 <li><a href="#personal2">Voyages</a></li>
@@ -227,4 +243,5 @@
         </div>
     </div>
 </footer>
+
 </html>
