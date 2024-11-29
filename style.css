@@ -691,3 +691,233 @@ html {
     opacity: 0.8;
 }
 
+/* Resetting some properties for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Body and general layout adjustments */
+    body {
+        font-size: 14px;
+    }
+
+    /* Barre du haut */
+    .top-bar {
+        padding: 5px 20px;
+        font-size: 8px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .top-lang {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Bar de navigation */
+    .top-nav {
+        font-size: 10px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .top-nav ul {
+        list-style: none;
+        gap: 10px;
+    }
+
+    .top-nav a {
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+
+    /* Contact button */
+    .contact-button {
+        margin-right: 3px;
+        border: 2px solid #FFFFF0;
+        border-radius: 1px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    /* Bouton de toggle de la sidebar */
+    .toggle-sidebar {
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        top: 60px;
+    }
+
+    .sidebar-hidden {
+        transform: translateX(100%);
+    }
+
+    .main-content {
+        transform: translateX(0);
+    }
+
+    /* Profile Picture */
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar-nav a {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .section {
+        padding: 5rem;
+    }
+
+    .description-block {
+        padding: 1rem;
+    }
+
+    /* Experience blocks */
+    .experience-block {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .exp-image {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .exp-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .section-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Carrousel */
+    .carousel {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-images {
+        display: block;  /* Empêche les images d'être côte à côte */
+    }
+
+    .carousel-images img {
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        bottom: 20px;  /* Espace plus large pour les petits écrans */
+    }
+
+    .carousel-arrow {
+        font-size: 20px;  /* Réduit la taille des flèches sur mobile */
+        padding: 8px;
+    }
+
+    /* Banner images */
+    .banner-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-image::after {
+        font-size: 1rem;
+    }
+}
+
+/* For smaller mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .sidebar-nav a {
+        font-size: 0.9rem;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .footer-column {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 3rem;
+    }
+
+    .experience-block {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .exp-image {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .exp-text {
+        font-size: 0.9rem;
+    }
+
+    /* Carrousel */
+    .carousel {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-images img {
+        height: auto;  /* Permet aux images de s'ajuster verticalement si nécessaire */
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .carousel-indicators .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .banner-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .section-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
