@@ -24,7 +24,7 @@
                 <li><a href="education.html">Formation</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="projects.html">Projets</a></li>
-                <li><a href="#personal">Personnel</a></li>
+                <li><a href="index.html#personal">Personnel</a></li>
             </ul>
         </nav>
         <button class="contact-button">Me contacter</button>
@@ -39,7 +39,7 @@
                 <li><a href="education.html">Formation</a></li>
                 <li><a href="experiences.html">Expériences</a></li>
                 <li><a href="projects.html">Projets</a></li>
-                <li><a href="#personal">Personnel</a></li>
+                <li><a href="index.html#personal">Personnel</a></li>
             </ul>
         </div>
 
@@ -68,7 +68,7 @@
         <!-- Bloc de description -->
         <section class="description-block">
             <p>Bienvenue sur la page présentant mes projets. Découvrez les détails des projets que j'ai développé dans l'objectif de gagner en compétence sur des technologies qui ont retenus mon attention.</p>
-            <div class="image-banner">
+            <div class="images-banner">
                 <div class ="banner-image" data-title = "[IA] Mini-modèle de diffusion" data-target="proj1-block">
                     <img src="images/projects/projects_mindiff.jpg" alt="Projet 1">
                 </div>
@@ -110,7 +110,7 @@
                         <li>Compréhension du contexte théorique des modèles de diffusion</li>
                     </ul>
                 </p>
-                <p><b>Etapes suivantes : </b>
+                <p><b>Potentiels étapes suivantes : </b>
                     <br>
                     <ul class="indented-list">
                         <li>Compréhension et expérimentation des techniques de fine-tuning de modèles de fondations (e.g., LoRA)</li>
@@ -131,6 +131,7 @@
             </div>
         </section>
 
+        <!-- Blocs de démo -->
         <script
 	    type="module"
 	    src="https://gradio.s3-us-west-2.amazonaws.com/5.7.0/gradio.js"
@@ -139,29 +140,16 @@
         <gradio-app src="https://julien-commes-diffusion-mini.hf.space" eager="true" theme_mode = "dark"></gradio-app>
 
         <section id="proj2-block" class="experience-block">
-            <div class="carousel exp right">
-                <div class="carousel-images">
-                    <img src="images/projects/projects_web.png" alt="Image 1">
-                    <img src="images/no_image.jpg" alt="Image 2">
-                </div>
-                <button class="carousel-arrow left">&#10094;</button>
-                <button class="carousel-arrow right">&#10095;</button>
-                <div class="carousel-indicators">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
+            <img src="images/projects/projects_web.png" alt="Image 1" class="exp-image right">
             <div class="exp-text">
                 <h2>[Web] Site internet personnel - <b>Travail en cours</b></h2>
-                <p>Courte description</p>
+                <p>Tout simplement le site sur lequel vous naviguez actuellement. J'ai entrepris ce projet principalement pour avoir un support sur lequel exposer des démonstrations intéractives de mes travaux, projets et expériences, ainsi que pour pouvoir donner une touche personnelle à mon profil. Le développement web n'étant pas ma spécialité, je me suis limité au Front-end du site.</p>
                 <br>
                 <p><b>Objectifs et contributions : </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Objectif 1</li>
-                        <li>Objectif 2</li>
-                        <li>Objectif 3</li>
-                        <li>Objectif 4</li>
+                        <li>Développer une interface front-end interactive (effets de zoom, carousel...)</li>
+                        <li>Héberger des modèles d'IA et intégrer un outil de démonstration en ligne</li>
                     </ul>
                 </p>
                 <p><b>Technologies & Compétences: </b>JavaScript, CSS, HTML, Prompt Engineering, Git.</p>
@@ -179,22 +167,29 @@
             <div class="carousel exp left">
                 <div class="carousel-images">
                     <img src="images/education/mines/mines_1.png" alt="Image 1">
+                    <img src="images/projects/vfi/vfi_0.png" alt="Image 2">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
             <div class="exp-text">
-                <h2>[IA] Interpolation de trames vidéo - <b>Travail en cours</b></h2>
-                <p>Courte description</p>
+                <h2>[IA] Interpolation de trames vidéo</h2>
+                <p>L'interpolation de trames vidéo consiste à déterminer une nouvelle image entre 2 images adjacentes d'une vidéo. Parmi les nombreuses applications on peut notamment citer l'augmentation du nombre de frame (dans la restauration de vieilles vidéos ou pour fluidifier des vidéos en stop motion par exemple), les ralentis de vidéo ou encore la fluidification du flux vidéo (télévision, streaming). J'ai effectué ce projet comme rendu final de mon cours de "Machine Learning & differentiable programming" aux Mines Nancy (15-20 heures), celui-ci était mon premier projet de Deep Learning et ma première expérience pratique de PyTorch.</p>
                 <br>
                 <p><b>Objectifs et contributions : </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Objectif 1</li>
-                        <li>Objectif 2</li>
-                        <li>Objectif 3</li>
-                        <li>Objectif 4</li>
+                        <li>Etudier l'état de l'art en Interpolation de trames vidéo</li>
+                        <li>Ecrire, entrainer et évaluer un premier modèle de Deep Learning "from scratch"</li>
+                        <li>Utiliser des outils de parallélisations de calcul</li>
+                        <li>Avoir une expérience pratique de la manipulation de données vidéos</li>
                     </ul>
                 </p>
-                <p><b>Technologies & Compétences: </b>Python, PyTorch, Numpy, Git, Interpolation de frame vidéo, Architecture Unet.</p>
+                <p><b>Technologies & Compétences: </b>Python, PyTorch, Numpy, Git, CUDA, Interpolation de frame vidéo, Architecture Unet.</p>
                 <p><b>Liens utiles : </b>
                     <br>
                     <ul class="indented-list">
@@ -203,6 +198,7 @@
                 </p>
             </div>
         </section>
+
     </main>
 </body>
 
@@ -210,19 +206,19 @@
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-column">
+            <h3>Formation</h3>
+            <ul>
+                <li><a href="education.html#ed1-block">Mines Nancy</a></li>
+                <li><a href="education.html#ed2-block">Université de Lorraine</a></li>
+                <li><a href="education.html#ed3-block">CPGE Joffre</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
             <h3>Expériences</h3>
             <ul>
                 <li><a href="experiences.html#exp1-block">Stage en R&D</a></li>
                 <li><a href="experiences.html#exp2-block">Management de projet</a></li>
                 <li><a href="experiences.html#exp3-block">WWOOFing dans un ranch</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Etudes & Formations</h3>
-            <ul>
-                <li><a href="education.html#ed1-block">Mines Nancy</a></li>
-                <li><a href="education.html#ed2-block">Université de Lorraine</a></li>
-                <li><a href="education.html#ed3-block">CPGE Joffre</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -236,11 +232,12 @@
         <div class="footer-column">
             <h3>Personnel</h3>
             <ul>
-                <li><a href="#personal1">Centres d'intérêt</a></li>
-                <li><a href="#personal2">Voyages</a></li>
-                <li><a href="#personal3">Volontariat</a></li>
+                <li><a href="index.html#personal">Centres d'intérêt</a></li>
+                <li><a href="index.html#personal">Voyages</a></li>
+                <li><a href="index.html#personal">Volontariat</a></li>
             </ul>
         </div>
     </div>
+    <p class="footer-message">Ce site est destiné à un usage personnel et n'a aucune vocation commerciale. Certains contenus, notamment les images, peuvent ne pas m'appartenir ou représenter des tiers. Si vous rencontrez un problème ou souhaitez signaler un contenu, n'hésitez pas à me contacter à l'adresse suivante : julien.commes.pro@gmail.com.</p>
 </footer>
 </html>

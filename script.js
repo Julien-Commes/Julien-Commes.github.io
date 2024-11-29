@@ -1,4 +1,4 @@
-console.log("Script chargé !");
+//console.log("Script chargé !");
 
 document.addEventListener('DOMContentLoaded', function() {
     // Sélectionner le bouton et la sidebar
@@ -76,7 +76,7 @@ carousels.forEach(carousel => {
 
     const images = carousel.querySelectorAll('.carousel-images img');
     const dots = carousel.querySelectorAll('.carousel-indicators .dot');
-    console.log(dots)
+    //console.log(dots)
     const carouselImages = carousel.querySelector('.carousel-images');
     const leftArrow = carousel.querySelector('.carousel-arrow.left');
     const rightArrow = carousel.querySelector('.carousel-arrow.right');
@@ -106,6 +106,7 @@ carousels.forEach(carousel => {
 
     rightArrow.addEventListener('click', () => {
         showImage(currentIndex + 1);
+        console.log("Yep")
     });
 
     // Gérer les clics sur les indicateurs
