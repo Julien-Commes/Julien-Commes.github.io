@@ -703,19 +703,21 @@ html {
         padding: 5px 20px;
         font-size: 8px;
         position: fixed;
+        display: flex;
+        justify-content: space-between;
         top: 0;
         left: 0;
         right: 0;
     }
 
     .top-lang {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 2px;
+        margin-right: 5px;
     }
 
     /* Bar de navigation */
     .top-nav {
-        font-size: 10px;
+        font-size: 8px;
         margin-right: 10px;
         margin-left: 20px;
     }
@@ -727,7 +729,7 @@ html {
 
     .top-nav a {
         text-decoration: none;
-        font-size: 10px;
+        font-size: 8px;
     }
 
 
@@ -738,12 +740,14 @@ html {
         border-radius: 1px;
         padding: 5px 10px;
         cursor: pointer;
+        font-size: 8px;
     }
 
     /* Bouton de toggle de la sidebar */
     .toggle-sidebar {
         font-size: 1rem;
         cursor: pointer;
+        margin-left: 1px;
     }
 
     /* Sidebar */
@@ -774,13 +778,22 @@ html {
 
     /* Footer */
     .footer-container {
-        flex-direction: column;
         align-items: center;
     }
 
     .footer-column {
+        font-size: 10px;
         margin-bottom: 20px;
         width: 100%;
+    }
+
+    .footer-column h3 {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .footer-message {
+        font-size: 10px;
     }
 
     .section {
@@ -806,7 +819,7 @@ html {
 
     .exp-text {
         font-size: 1rem;
-        text-align: center;
+        text-align: start;
     }
 
     .section-image {
@@ -839,12 +852,12 @@ html {
 
     /* Banner images */
     .banner-image {
-        width: 100%;
-        height: auto;
+        max-height: 200px;
+        width: 200px;
     }
 
     .banner-image::after {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -867,9 +880,25 @@ html {
         height: 120px;
     }
 
-    .footer-column {
-        padding: 10px;
+    /* Footer */
+    .footer-container {
+        align-items: center;
     }
+
+    .footer-column {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .footer-message {
+        font-size: 10px;
+    }
+    
 
     .section {
         padding: 3rem;
@@ -910,14 +939,321 @@ html {
         height: 8px;
     }
 
-    .banner-image {
-        width: 100%;
-        height: auto;
-    }
-
     .section-image {
         width: 100%;
         height: auto;
     }
 }
 
+/* Style général du carrousel */
+.carousel {
+    position: relative;
+    width: 100%;                /* Prend toute la largeur disponible */
+    max-width: 500px;           /* Limite la largeur maximale */
+    aspect-ratio: 1 / 1;        /* Assure un ratio carré */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;             /* Centre le carousel */
+    flex-shrink: 0;             /* Empêche le redimensionnement */
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%; /* Image prend la largeur du carousel */
+    height: auto; /* Conserve les proportions */
+    flex-shrink: 0; /* Empêche le rétrécissement */
+}
+
+/* Flèches de navigation */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFF0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-indicators .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFF0;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.carousel-indicators .dot.active {
+    opacity: 1;
+}
+
+/* Conteneur de l'expérience */
+.experience-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;            /* Permet le retour à la ligne */
+}
+
+/* Texte de l'expérience */
+.exp-text {
+    flex: 1;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Réglage des images */
+.exp-image {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+}
+
+/* --- Responsive Design --- */
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .experience-block {
+        flex-direction: column; /* Passer en mode colonne */
+        align-items: center;    /* Centrer les éléments */
+    }
+
+    .carousel {
+        width: 100%;            /* Le carousel prend la largeur du conteneur */
+        aspect-ratio: 16 / 9;   /* Ratio légèrement plus rectangulaire */
+    }
+}
+
+/* Pour les mobiles */
+@media (max-width: 480px) {
+    .experience-block {
+        flex-direction: column; /* Empile le texte et le carousel */
+    }
+
+    .carousel {
+        width: 100%;            /* Pleine largeur sur mobile */
+        aspect-ratio: 4 / 3;    /* Ratio adapté aux écrans mobiles */
+    }
+
+    .exp-text {
+        text-align: start;     /* Centre le texte pour plus de lisibilité */
+        font-size: 0.9rem;      /* Réduit légèrement la taille de la police */
+    }
+}
+
+/* Sections dépliables */
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    color: #0e0e0e;
+    background-color: #FFFFF0;
+    transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap; /* Pour forcer l'empilement sur petits écrans */
+}
+
+.section-content.active {
+    max-height: 500px;
+    padding: 20px;
+}
+
+/* Gestion du carrousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+/* Section texte */
+.section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 50%; /* Largeur en grand écran */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section-content {
+        flex-direction: column; /* Empile carrousel et texte */
+        text-align: center;
+    }
+
+    .section-text {
+        width: 100%; /* Largeur en petit écran */
+        margin: 0;
+    }
+
+    .carousel {
+        width: 100%; /* Carrousel prend toute la largeur */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .section-content {
+        padding: 10px; /* Moins de padding */
+    }
+
+    .section-text {
+        font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+    }
+
+    .carousel {
+        max-width: 100%; /* Prend toute la largeur de l'écran */
+    }
+
+    .section-text ul {
+        padding-left: 0; /* Supprime le retrait de la liste */
+        text-align: left; /* Texte aligné à gauche */
+    }
+
+    .section-text ul li {
+        font-size: 0.85rem; /* Ajuste la taille des éléments */
+        margin-bottom: 0.5rem;
+    }
+
+    .section-text a {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+}
+/* Sections dépliables */
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    color: #0e0e0e;
+    background-color: #FFFFF0;
+    transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Quand la section est active, la hauteur est automatique */
+.section-content.active {
+    max-height: 1000px; /* Donne une hauteur initiale plus grande */
+    padding: 20px;
+}
+
+/* Pour s'assurer qu'on prenne la hauteur complète selon le contenu */
+.section-content.active {
+    max-height: none;
+    overflow: visible;
+}
+
+/* Carrousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Images du carrousel */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Texte de la section */
+.section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 50%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .carousel {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
