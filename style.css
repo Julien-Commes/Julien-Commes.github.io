@@ -19,25 +19,24 @@ body {
 .top-bar {
     background-color: #FFFFF0;
     color: #0e0e0e;
-    padding: 5px 20px;
+    padding: 5px 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
     left: 0;
     right: 0;
+    position: fixed;
     z-index: 30;
 }
 
 .top-lang {
-    margin-left: 30px;
-    margin-right: auto;
+    margin-left: 1%;
+    margin-right: 2%;
 }
 
 /* Bar de navigation */
 .top-nav {
-    margin-right: 50px;
+    margin-right: 1%;
     margin-left: auto;
 }
 
@@ -66,7 +65,6 @@ body {
 .contact-button {
     background-color: #121212;
     color: #FFFFF0;
-    margin-right: 15px;
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid #FFFFF0;
     border-radius: 1px;
@@ -700,42 +698,28 @@ html {
 
     /* Barre du haut */
     .top-bar {
-        padding: 5px 20px;
-        font-size: 8px;
-        position: fixed;
-        display: flex;
-        justify-content: space-between;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .top-lang {
-        margin-left: 2px;
-        margin-right: 5px;
+        font-size: 10px;
     }
 
     /* Bar de navigation */
     .top-nav {
-        font-size: 8px;
-        margin-right: 10px;
-        margin-left: 20px;
+        font-size: 10px;
+        margin-right: 35px;
+        margin-left: auto;
     }
 
     .top-nav ul {
         list-style: none;
-        gap: 10px;
+        gap: 3%;
     }
 
     .top-nav a {
         text-decoration: none;
-        font-size: 8px;
+        font-size: 10px;
     }
-
 
     /* Contact button */
     .contact-button {
-        margin-right: 3px;
         border: 2px solid #FFFFF0;
         border-radius: 1px;
         padding: 5px 10px;
@@ -867,6 +851,40 @@ html {
         font-size: 12px;
     }
 
+    /* Barre du haut */
+    .top-bar {
+        padding: 5px 2% 2%;
+        font-size: 8px;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .top-lang {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* Bar de navigation */
+    .top-nav {
+        font-size: 8px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .top-nav ul {
+        list-style: none;
+        gap: 10px;
+    }
+
+    .top-nav a {
+        text-decoration: none;
+        font-size: 8px;
+    }
+
     .sidebar-nav a {
         font-size: 0.9rem;
     }
@@ -878,6 +896,19 @@ html {
     .profile-picture {
         width: 120px;
         height: 120px;
+    }
+
+    .page-title {
+        color: #FFFFF0;
+        font-size: 2.5rem;
+        margin-top: 150px;
+        margin-bottom: auto; /* Enlève la marge en dessous */
+        font-weight: bold;
+    }
+
+    #education-title{
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     /* Footer */
@@ -1190,7 +1221,7 @@ html {
     padding: 0;
     color: #0e0e0e;
     background-color: #FFFFF0;
-    transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+    transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1257,3 +1288,4 @@ html {
         margin-bottom: 20px;
     }
 }
+
