@@ -19,41 +19,30 @@ body {
 .top-bar {
     background-color: #FFFFF0;
     color: #0e0e0e;
-    padding: 5px 20px;
+    padding: 5px 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    position: fixed;
+    z-index: 30;
 }
 
-/* Menu button */
-.menu-button {
-    font-size: 1.5rem;
+/* Transparence lorsque scroll */
+.top-bar.scrolled {
+    background-color: rgba(14, 14, 14, 0.8); /* Transparence de 20% */
     color: #FFFFF0;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Logo */
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: auto;
 }
 
 .top-lang {
-    margin-left: 30px;
-    margin-right: auto;
+    margin-left: 1%;
+    margin-right: 2%;
 }
 
-/* Navigation */
+/* Bar de navigation */
 .top-nav {
-    margin-right: 50px;
+    margin-right: 1%;
     margin-left: auto;
 }
 
@@ -70,6 +59,10 @@ body {
     transition: color 0.3s;
 }
 
+.top-nav.scrolled {
+    color: #FFFFF0;
+}
+
 .top-nav.scrolled a{
     color: #FFFFF0;
 }
@@ -82,7 +75,6 @@ body {
 .contact-button {
     background-color: #121212;
     color: #FFFFF0;
-    margin-right: 15px;
     font-family: 'Courier New', Courier, monospace;
     border: 2px solid #FFFFF0;
     border-radius: 1px;
@@ -103,6 +95,11 @@ body {
     color: #0e0e0ead;
     font-size: 2rem;
     cursor: pointer;
+}
+
+/* Bouton de toggle de la sidebar */
+.toggle-sidebar.scrolled {
+    color: #FFFFF0;
 }
 
 /* Sidebar */
@@ -128,76 +125,6 @@ body {
     transform: translateX(250px); /* Décale la sidebar à gauche */
 }
 
-/* Main Content */
-.main-content {
-    flex: 1;
-    text-align: center;
-}
-
-.main-content-hidden {
-    transform: translateX(250px); /* Décale la sidebar à gauche */
-}   
-
-/* Sections */
-section {
-    padding: 8rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-
-    .main-content {
-        margin-left: 200px;
-    }
-}
-
-/* Logo et texte dans la barre du haut */
-.top-bar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.top-bar .header-text {
-    font-size: 1rem;
-}
-
-/* Transparence lorsque scroll */
-.top-bar.scrolled {
-    background-color: rgba(14, 14, 14, 0.8); /* Transparence de 20% */
-    color: #FFFFF0;
-}
-
-.top-nav.scrolled {
-    color: #FFFFF0;
-}
-
-/* Bouton de toggle de la sidebar */
-.toggle-sidebar.scrolled {
-    color: #FFFFF0;
-}
-
-/* Profile Picture */
-.profile-picture {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center bottom;
-    border: 3px solid #FFFFF0;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.main-profile{
-    width: 300px;
-    height: 300px;
-    object-position: center top;
-    flex: 1;
-}
-
 /* Sidebar Navigation */
 .sidebar-nav ul {
     list-style: none;
@@ -219,71 +146,82 @@ section {
     color: #c0c0c0;
 }
 
+/* Main Content */
+.main-content {
+    flex: 1;
+    text-align: center;
+}
+
+.main-content-hidden {
+    transform: translateX(250px); /* Décale la sidebar à gauche */
+}   
+
+/* Sections */
+section {
+    padding: 8rem;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center bottom;
+    border: 3px solid #FFFFF0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-profile{
+    width: 300px;
+    height: 300px;
+    object-position: center top;
+    flex: 1;
+}
+
+/* Blocs de sections sur la page d'acceuil */
 .home {
     background-color: #FFFFF0;
     color: #121212;
 
 }
 
-/* Sections alternées avec couleurs de fond */
-#projects {
-    background-color: #121212;
-    color: #FFFFF0;
-}
-
-#experiences {
-    color: #FFFFF0;
-    background-color: #121212;
-}
-
-#personal {
-    background-color: #121212;
-    color: #FFFFF0;
-}
-
-/* Exemple d'image de fond */
-#projects {
+/* Image de fond section edu Accueil */
+#education {
     background-color: rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
     background-image: url('images/background_education.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 0% 25%;
 }
 
-/* Exemple d'image de fond */
+/* Image de fond section proj Accueil */
+#projects {
+    background-color: rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
+    background-image: url('images/background_projects.jpg');
+    background-size: cover;
+    background-position: 0% 25%;
+}
+
+/* Image de fond section exp Accueil */
 #experiences {
     background-image: url('images/background_experiences_1.jpg');
     background-size: cover;
     background-position: center;
 }
 
-/* Exemple d'image de fond */
+/* Image de fond section perso Accueil */
 #personal {
-    background-image: url('images/background_perso.png');
+    background-image: url('images/background_perso.png'); /* Transférer dans HTML ?? */
     background-size: cover;
-    background-position: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-
-    .profile-picture {
-        width: 100px;
-        height: 100px;
-    }
-
-    .main-content {
-        margin-left: 200px;
-    }
+    background-position: 0% 25%;
 }
 
 /* Footer Style */
 .site-footer {
     background-color: #0e0e0e;
     color: #FFFFF0;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: left;
 }
 
@@ -325,6 +263,11 @@ section {
     color: #c0c0c0;
 }
 
+.footer-message {
+    text-align: center;
+    font-size: 14px;
+}
+
 .header-image {
     width: 100%;
     /*height: 200px;*/
@@ -333,20 +276,18 @@ section {
 
 /* En-tête de la page */
 .page-header {
+    height: 300px;
     position: relative;
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    text-align: center; /* Texte centré */
-    height: 300px; /* Ajuste la hauteur de l'en-tête */
-    margin: 0; /* Supprime les marges par défaut */
+    margin: 0; 
 }
 
 /* Titre de l'en-tête */
 .page-title {
     color: #FFFFF0;
     font-size: 2.5rem;
-    margin: 0; /* Supprime les marges par défaut */
+    margin-top: 150px;
+    margin-bottom: auto; /* Enlève la marge en dessous */
+    font-weight: bold;
 }
 
 /* Description Block */
@@ -357,7 +298,8 @@ section {
     text-align: center;
 }
 
-.image-banner {
+/* Bande contenant les images des sections */
+.images-banner {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -369,9 +311,9 @@ section {
     position: relative;
     width: 100%;
     height: 300px;
-    max-width: 300px; /* Ajuste la taille si nécessaire */
+    max-width: 300px;
     border-radius: 5px;
-    overflow: hidden; /* Assure que l'overlay reste dans les limites de l'image */
+    overflow: hidden; 
     transition: transform 0.3s ease-in-out;
 }
 
@@ -385,7 +327,7 @@ section {
 
 /* Effet zoom sur survol */
 .banner-image:hover img {
-    transform: scale(1.05); /* Zoom léger */
+    transform: scale(1.05);
 }
 
 /* Overlay sur survol */
@@ -396,7 +338,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Couleur de l'overlay */
+    background-color: rgba(0, 0, 0, 0.6); 
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
@@ -408,7 +350,7 @@ section {
 }
 
 .banner-image::after {
-    content: attr(data-title); /* Affiche le titre depuis un attribut data-title */
+    content: attr(data-title); 
     position: absolute;
     top: 50%;
     left: 50%;
@@ -419,37 +361,82 @@ section {
     opacity: 0;
     z-index: 2;
     transition: opacity 0.3s ease-in-out;
+    width: 95%;           /* Assure que le texte occupe toute la largeur */
+    padding-left: 10px;    /* Si nécessaire, ajuster les marges internes */
+    padding-right: 10px;   /* Si nécessaire, ajuster les marges internes */
 }
 
 .banner-image:hover::after {
     opacity: 1;
 }
 
+/* Bandeau d'en-tête pleine largeur */
+.full-width-banner {
+    width: 100%;
+    background-size: cover;
+}
 
-/* Experience Blocks */
+.banner-exp {
+    background-image: url('images/background_experiences.jpg'); /* A transférer dans le HTML ? */
+    background-position: 0% 15%;
+}
+
+.banner-proj {
+    background-image: url('images/background_projects.jpg');  /* A transférer dans le HTML ? */
+    background-position: 0% 35%;
+}
+
+.banner-ed {
+    background-image: url('images/background_education.jpg');  /* A transférer dans le HTML ? */
+}
+
+/* Overlay et titre dans le bandeau */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+/* Blocks des pages != Acceuil */
 .experience-block {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 2rem;
+    gap: 2rem;
     margin: 2rem 0;
+    flex-wrap: wrap;            /* Permet le retour à la ligne */
 }
 
 /* Bloc impair : fond ivoire */
 .experience-block:nth-child(even) {
-    background-color: #FFFFF0; /* Couleur ivoire */
-    color: #121212; /* Texte noir */
+    background-color: #FFFFF0; 
+    color: #121212;
 }
 
 /* Bloc pair : fond noir */
 .experience-block:nth-child(odd) {
-    background-color: #121212; /* Couleur noir profond */
-    color: #FFFFF0; /* Texte ivoire */
+    background-color: #121212; 
+    color: #FFFFF0; 
 }
 
 .exp-image {
-    width: 400px;
-    height: 400px;
+    height: 500px;
+    overflow: hidden;
     object-fit: cover;
+    border-radius: 10px;
+    margin: 40px;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
 }
 
@@ -464,17 +451,18 @@ section {
 
 .exp-text {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center; /* Centre verticalement le texte */
+    justify-content: center;
     text-align: justify;
     font-size: 1rem;
     line-height: 1.5;
 }
 
 .exp-text p {
-    font-family: "Arial", sans-serif; /* Remplace par la police souhaitée */
-    font-size: 14px; /* Ajuste la taille du texte */
-    line-height: 1.6; /* Ajoute un espacement pour améliorer la lisibilité */
+    font-family: "Arial", sans-serif; 
+    font-size: 14px; 
+    line-height: 1.6; 
 }
 
 /* Animation Scroll */
@@ -482,65 +470,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Bandeau d'en-tête pleine largeur */
-.full-width-banner {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.banner-exp {
-    background-image: url('images/background_experiences.jpg');
-}
-
-.banner-proj {
-    background-image: url('images/background_education.jpg');
-}
-
-/* Overlay et titre dans le bandeau */
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Ombre pour améliorer la lisibilité */
-}
-
-.page-title {
-    color: #FFFFF0;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Contenu masqué par défaut */
-.section-content {
-    max-height: 0; /* Initialement masqué */
-    overflow: hidden; /* Empêche le contenu de dépasser */
-    padding: 0; /* Supprime le padding quand masqué */
-    color: #0e0e0e;
-    background-color: #FFFFF0;
-    border: 1px solid #ccc;
-    transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
-    display: flex;
-    justify-content: center; /* Centre horizontalement le contenu */
-    text-align: center;
-    align-items: center; /* Centre verticalement le contenu */
-    gap: 40px; /* Espacement entre l'image et le texte */
-}
-
-/* Contenu visible */
-.section-content.active {
-    max-height: 500px; /* Une hauteur suffisamment grande pour contenir le contenu */
-    padding: 20px; /* Réactive le padding */
-}
-
-/* Image */
 .section-image {
     width: 400px;
     height: 400px;
@@ -549,50 +478,36 @@ html {
     flex-shrink: 0; /* Empêche l'image de se redimensionner */
 }
 
-/* Gestion des marges pour alternance */
 .left {
-    margin-right: 40px;
+    margin-right: 40px; /* Gestion des marges pour alternance G/D*/
 }
 
 .right {
-    margin-left: 40px;
+    margin-left: 40px; /* Gestion des marges pour alternance G/D*/
     order: 2;
 }
 
-/* Texte */
-.section-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centre verticalement le texte */
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 40px;
-    width: 50%;
-}
-
-/* Style des sections */
+/* Style des sections classiques*/
 .section {
-    position: relative; /* Nécessaire pour l'overlay */
+    position: relative;
     cursor: pointer;
     padding: 10rem;
     color: #121212;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    overflow: hidden; /* Empêche l'overflow de l'overlay */
+    overflow: hidden;
     background-size: cover;
     background-position: center;
 }
 
 /* Overlay */
 .section-overlay {
-    position: relative; /* Contenu positionné normalement */
-    z-index: 2; /* Au-dessus de l'overlay visuel */
-    color: #FFFFF0; /* Couleur du texte */
+    position: relative;
+    z-index: 2;
+    color: #FFFFF0; 
 }
 
-/* Ajout de l'overlay visuel */
 .section::before {
     content: "";
     position: absolute;
@@ -600,29 +515,15 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur et opacité de l'overlay */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1; /* Derrière le contenu */
     transition: background-color 0.3s ease-in-out;
 }
 
 
-/* Animation au survol */
 .section:hover {
     transform: scale(1.05);
-}
-
-/* Style du résumé */
-.summary {
-    padding: 10rem;
-    color: #121212;
-    background-color: #FFFFF0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.3s ease-in-out;
-}
-
-/* Caché par défaut */
-.summary.hidden {
-    display: none;
+    z-index: 10;
 }
 
 /* Style du carrousel */
@@ -651,11 +552,403 @@ html {
 }
 
 .carousel-images img {
-    width: 100%;            /* La largeur prend 100% de l'espace du carrousel */
+    width: 100%;            
     height: 100%;
     flex-shrink: 0;
     border-radius: 10px;
     object-fit: cover;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFF0;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-indicators .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFF0;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.carousel-indicators .dot.active {
+    opacity: 1;
+}
+
+
+/* Bullet points */
+.indented-list{
+    margin-left: 20px; /* Ajuste l'indentation */
+    padding-left: 0; /* Supprime le padding par défaut si nécessaire */
+    list-style-position: outside;
+    font-family: "Arial", sans-serif; 
+    font-size: 14px; /* Ajuste la taille du texte */
+    line-height: 1.6; /* Ajoute un espacement pour améliorer la lisibilité */
+
+}
+
+.indented-list li {
+    text-indent: 10px; /* Indentation supplémentaire pour chaque ligne de texte */
+}
+
+.home-list{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+
+/* Conteneur principal */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px 0;
+}
+
+/* Style des liens */
+.social-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Style des images */
+.social-icon img {
+    width: 40px; 
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* Effet au survol */
+.social-icon:hover {
+    transform: scale(1.1); 
+    opacity: 0.8;
+}
+
+/* Resetting some properties for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Body and general layout adjustments */
+    body {
+        font-size: 14px;
+    }
+
+    /* Barre du haut */
+    .top-bar {
+        font-size: 10px;
+    }
+
+    /* Bar de navigation */
+    .top-nav {
+        font-size: 10px;
+        margin-right: 35px;
+        margin-left: auto;
+    }
+
+    .top-nav ul {
+        list-style: none;
+        gap: 3%;
+    }
+
+    .top-nav a {
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    /* Contact button */
+    .contact-button {
+        border: 2px solid #FFFFF0;
+        border-radius: 1px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 8px;
+    }
+
+    /* Bouton de toggle de la sidebar */
+    .toggle-sidebar {
+        font-size: 1rem;
+        cursor: pointer;
+        margin-left: 1px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        left: -100%;
+        top: 60px;
+    }
+
+    .sidebar-hidden {
+        transform: translateX(100%);
+    }
+
+    .main-content {
+        transform: translateX(0);
+    }
+
+    /* Profile Picture */
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar-nav a {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        align-items: center;
+    }
+
+    .footer-column {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer-column h3 {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+
+    .footer-message {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 5rem;
+        font-size: 14px;
+    }
+
+    .section h1{
+        font-size: 20px;
+    }
+
+    .description-block {
+        padding: 1rem;
+    }
+
+    /* Experience blocks */
+    .experience-block {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .exp-image {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .exp-text {
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .section-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Carrousel */
+    .carousel {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-images {
+        display: block;  /* Empêche les images d'être côte à côte */
+    }
+
+    .carousel-images img {
+        width: 100%;
+    }
+
+    .carousel-indicators {
+        bottom: 20px;  /* Espace plus large pour les petits écrans */
+    }
+
+    .carousel-arrow {
+        font-size: 20px;  /* Réduit la taille des flèches sur mobile */
+        padding: 8px;
+    }
+
+    /* Banner images */
+    .banner-image {
+        max-height: 200px;
+        width: 200px;
+    }
+
+    .banner-image::after {
+        font-size: 0.7rem;
+    }
+}
+
+/* For smaller mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    /* Barre du haut */
+    .top-bar {
+        padding: 5px 2% 2%;
+        font-size: 8px;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .top-lang {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* Bar de navigation */
+    .top-nav {
+        font-size: 8px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .top-nav ul {
+        list-style: none;
+        gap: 10px;
+    }
+
+    .top-nav a {
+        text-decoration: none;
+        font-size: 8px;
+    }
+
+    .sidebar-nav a {
+        font-size: 0.9rem;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    #education-title{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    /* Footer */
+    .footer-column {
+        margin-bottom: 10px;
+    }
+
+    .section {
+        padding: 3rem;
+        font-size: 10px;
+    }
+
+    .section h1{
+        font-size: 16px;
+    }
+
+    .experience-block {
+        padding: 1rem;
+    }
+
+    .exp-image {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .exp-text {
+        font-size: 0.9rem;
+        text-align: start;     /* Centre le texte pour plus de lisibilité */
+    }
+
+    /* Carrousel */
+    .carousel {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-images img {
+        height: auto;  /* Permet aux images de s'ajuster verticalement si nécessaire */
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .carousel-indicators .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Style général du carrousel */
+.carousel {
+    position: relative;
+    width: 100%;                /* Prend toute la largeur disponible */
+    max-width: 500px;           /* Limite la largeur maximale */
+    aspect-ratio: 1 / 1;        /* Assure un ratio carré */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;             /* Centre le carousel */
+    flex-shrink: 0;             /* Empêche le redimensionnement */
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%; /* Image prend la largeur du carousel */
+    height: auto; /* Conserve les proportions */
+    flex-shrink: 0; /* Empêche le rétrécissement */
 }
 
 /* Flèches de navigation */
@@ -706,52 +999,165 @@ html {
     opacity: 1;
 }
 
-.indented-list {
-    margin-left: 20px; /* Ajuste l'indentation */
-    padding-left: 0; /* Supprime le padding par défaut si nécessaire */
-    list-style-position: outside; /* Facultatif : positionne les puces à l'intérieur */
-    font-family: "Arial", sans-serif; /* Remplace par la police souhaitée */
-    font-size: 14px; /* Ajuste la taille du texte */
-    line-height: 1.6; /* Ajoute un espacement pour améliorer la lisibilité */
+/* --- Responsive Design --- */
 
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%;            /* Le carousel prend la largeur du conteneur */
+        aspect-ratio: 16 / 9;   /* Ratio légèrement plus rectangulaire */
+    }
 }
 
-.indented-list li {
-    text-indent: 10px; /* Indentation supplémentaire pour chaque ligne de texte */
+/* Pour les mobiles */
+@media (max-width: 480px) {
+    .carousel {
+        width: 100%;            /* Pleine largeur sur mobile */
+        aspect-ratio: 4 / 3;    /* Ratio adapté aux écrans mobiles */
+    }
 }
 
-.home-list{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-}
-
-/* Conteneur principal */
-.social-links {
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    gap: 20px; /* Espacement entre les icônes */
-    padding: 20px 0;
-}
-
-/* Style des liens */
-.social-icon {
-    display: inline-block;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Animation au survol */
-}
-
-/* Style des images */
-.social-icon img {
-    width: 40px; /* Taille des icônes */
-    height: 40px;
+/* Gestion du carrousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
     object-fit: cover;
-    border-radius: 50%; /* Arrondi pour un effet cercle */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    border-radius: 10px;
 }
 
-/* Effet au survol */
-.social-icon:hover {
-    transform: scale(1.1); /* Agrandit légèrement */
-    opacity: 0.8; /* Légère transparence */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 40px;
+    width: 50%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .section-content {
+        flex-direction: column; /* Empile carrousel et texte */
+        text-align: center;
+    }
+
+    .section-text {
+        width: 100%; /* Largeur en petit écran */
+        margin: 0;
+    }
+
+    .section-text h2{
+        font-size: 20px;
+    }
+
+    .carousel {
+        width: 100%; /* Carrousel prend toute la largeur */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .section-content {
+        padding: 10px; /* Moins de padding */
+    }
+
+    .section-text {
+        font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+    }
+
+    .section-text h2{
+        font-size: 14px;
+    }
+
+    .section-text ul {
+        padding-left: 0; /* Supprime le retrait de la liste */
+        text-align: left; /* Texte aligné à gauche */
+    }
+
+    .section-text ul li {
+        font-size: 0.85rem; /* Ajuste la taille des éléments */
+        margin-bottom: 0.5rem;
+    }
+
+    .section-text a {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.85rem;
+    }
+
+    .carousel {
+        max-width: 100%; /* Prend toute la largeur de l'écran */
+    }
+}
+
+/* Sections dépliables */
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    color: #0e0e0e;
+    background-color: #FFFFF0;
+    transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Pour s'assurer qu'on prenne la hauteur complète selon le contenu */
+.section-content.active {
+    max-height: none;
+    overflow: visible;
+    padding: 20px;
+}
+
+/* Carrousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Images du carrousel */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .carousel {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 

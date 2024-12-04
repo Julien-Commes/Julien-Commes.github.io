@@ -24,7 +24,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="experiences.html">Experiences</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="#personal">Personal</a></li>
+                <li><a href="index.html#personal">Personal</a></li>
             </ul>
         </nav>
         <a href="mailto:julien.commes.pro@gmail.com" class="contact-button">Contact me</a>
@@ -39,7 +39,7 @@
                 <li><a href="education.html">Education</a></li>
                 <li><a href="experiences.html">Experiences</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="#personal">Personal</a></li>
+                <li><a href="index.html#personal">Personal</a></li>
             </ul>
         </div>
 
@@ -61,14 +61,14 @@
         <!-- En-tête de la page -->
         <section class="page-header full-width-banner banner-proj">
             <div class="banner-overlay">
-                <h1 class="page-title">My Projects</h1>
+                <h1 class="page-title">Projects</h1>
             </div>
         </section>
 
         <!-- Bloc de description -->
         <section class="description-block">
-            <p>Welcome to the page presenting my projects. Discover the details of the projects I have developed with the aim of gaining expertise in some technologies that have caught my attention.</p>
-            <div class="image-banner">
+            <p>Welcome to the page presenting my projects. Discover a selection of technological projects I developed, their objectives, the challenges tackled, my contributions, and test the final results.</p>
+            <div class="images-banner">
                 <div class ="banner-image" data-title = "[AI] Mini Diffusion Model" data-target="proj1-block">
                     <img src="../images/projects/projects_mindiff.jpg" alt="Projet 1">
                 </div>
@@ -131,6 +131,7 @@
             </div>
         </section>
 
+        <!-- Blocs de démo -->
         <script
 	    type="module"
 	    src="https://gradio.s3-us-west-2.amazonaws.com/5.7.0/gradio.js"
@@ -139,37 +140,24 @@
         <gradio-app src="https://julien-commes-diffusion-mini.hf.space" eager="true" theme_mode = "dark"></gradio-app>
 
         <section id="proj2-block" class="experience-block">
-            <div class="carousel exp right">
-                <div class="carousel-images">
-                    <img src="../images/projects/projects_web.png" alt="Image 1">
-                    <img src="../images/no_image.jpg" alt="Image 2">
-                </div>
-                <button class="carousel-arrow left">&#10094;</button>
-                <button class="carousel-arrow right">&#10095;</button>
-                <div class="carousel-indicators">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
+            <img src="../images/projects/projects_web.png" alt="Image 1" class="exp-image right">
             <div class="exp-text">
                 <h2>[Web] My personal Website - <b>Work In Progress</b></h2>
-                <p>Courte description</p>
+                <p>Quite simply the site you're currently browsing. I undertook this project mainly to have a medium on which to display interactive demonstrations of my work, projects and experiences, as well as to be able to give my profile a personal touch. As web development is not my speciality, I limited myself to the front-end of the site.</p>
                 <br>
-                <p><b>Objectifs et contributions : </b>
+                <p><b>Objectives & contributions: </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Objectif 1</li>
-                        <li>Objectif 2</li>
-                        <li>Objectif 3</li>
-                        <li>Objectif 4</li>
+                        <li>Develop an interactive front-end interface (zoom effects, carousel, etc.)</li>
+                        <li>Host AI models and integrate an online demonstration tool</li>
                     </ul>
                 </p>
-                <p><b>Technologies & Compétences: </b>JavaScript, CSS, HTML, Prompt Engineering, Git.</p>
-                <p><b>Liens utiles : </b>
+                <p><b>Technologies & Skills: </b>JavaScript, CSS, HTML, Prompt Engineering, Git.</p>
+                <p><b>Useful links: </b>
                     <br>
                     <ul class="indented-list">
-                        <li><a href="https://diogotc.com/">Un site qui m'a inspiré pour le design du site</a></li>
-                        <li><a href="https://github.com/Julien-Commes/Julien-Commes.github.io">Le répertoire Github du projet</a></li>
+                        <li><a href="https://diogotc.com/">A website that inspired the design of this website</a></li>
+                        <li><a href="https://github.com/Julien-Commes/Julien-Commes.github.io">Github repository of the project</a></li>
                     </ul>
                 </p>
             </div>
@@ -179,26 +167,33 @@
             <div class="carousel exp left">
                 <div class="carousel-images">
                     <img src="../images/education/mines/mines_1.png" alt="Image 1">
+                    <img src="../images/projects/vfi/vfi_0.png" alt="Image 2">
+                </div>
+                <button class="carousel-arrow left">&#10094;</button>
+                <button class="carousel-arrow right">&#10095;</button>
+                <div class="carousel-indicators">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
                 </div>
             </div>
             <div class="exp-text">
-                <h2>[AI] Video Frame Interpolation - <b>Work In Progress</b></h2>
-                <p>Courte description</p>
+                <h2>[AI] Video Frame Interpolation</h2>
+                <p>Video frame interpolation consists of determining a new image between 2 adjacent images in a video. Its many applications include increasing the number of frames (when restoring old videos or smoothing out stop-motion videos, for example), video slow-motion and smoothing out video streams (television, streaming). I did this project as the final output of my 'Machine Learning & differentiable programming' course at Mines Nancy (15-20 hours), which was my first Deep Learning project and my first practical experience of PyTorch.</p>
                 <br>
-                <p><b>Objectifs et contributions : </b>
+                <p><b>Objectives & Contributions : </b>
                     <br>
                     <ul class="indented-list">
-                        <li>Objectif 1</li>
-                        <li>Objectif 2</li>
-                        <li>Objectif 3</li>
-                        <li>Objectif 4</li>
+                        <li>Study the state of the art in video frame interpolation</li>
+                        <li>Writing, training and evaluating a first Deep Learning model from scratch</li>
+                        <li>Use parallel computing tools</li>
+                        <li>Practical experience in handling video data</li>
                     </ul>
                 </p>
-                <p><b>Technologies & Compétences: </b>Python, PyTorch, Numpy, Git, Interpolation de frame vidéo, Architecture Unet.</p>
-                <p><b>Liens utiles : </b>
+                <p><b>Technologies & Skills: </b>Python, PyTorch, Numpy, Git, CUDA, Video Frame Interpolation, Unet Architecture.</p>
+                <p><b>Useful links: </b>
                     <br>
                     <ul class="indented-list">
-                        <li><a href="https://github.com/Julien-Commes/_DL_Mini-project">Le répertoire Github du projet</a></li>
+                        <li><a href="https://github.com/Julien-Commes/_DL_Mini-project">Github repository of the project</a></li>
                     </ul>
                 </p>
             </div>
@@ -210,19 +205,19 @@
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-column">
+            <h3>Education</h3>
+            <ul>
+                <li><a href="education.html#ed1-block">Mines Nancy</a></li>
+                <li><a href="education.html#ed2-block">Université de Lorraine</a></li>
+                <li><a href="education.html#ed3-block">CPGE Joffre</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
             <h3>Experiences</h3>
             <ul>
                 <li><a href="experiences.html#exp1-block">R&D Internship</a></li>
                 <li><a href="experiences.html#exp2-block">Project Management</a></li>
                 <li><a href="experiences.html#exp3-block">WWOOFing in a ranch</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Educational Background</h3>
-            <ul>
-                <li><a href="education.html#ed1-block">Mines Nancy</a></li>
-                <li><a href="education.html#ed2-block">Université de Lorraine</a></li>
-                <li><a href="education.html#ed3-block">CPGE Joffre</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -236,12 +231,13 @@
         <div class="footer-column">
             <h3>Personal</h3>
             <ul>
-                <li><a href="#personal1">Centres d'intérêt</a></li>
-                <li><a href="#personal2">Voyages</a></li>
-                <li><a href="#personal3">Volontariat</a></li>
+                <li><a href="index.html#personal">Centres d'intérêt</a></li>
+                <li><a href="index.html#personal">Voyages</a></li>
+                <li><a href="index.html#personal">Volontariat</a></li>
             </ul>
         </div>
     </div>
+    <p class="footer-message">This website is intended for personal use only and has no commercial purpose. Some content, including images, may not be my property or may feature third parties. If you have any concerns or wish to report any content, please feel free to contact me at: julien.commes.pro@gmail.com.</p>
 </footer>
 
 </html>

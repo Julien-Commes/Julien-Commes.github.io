@@ -1,4 +1,4 @@
-console.log("Script chargé !");
+//console.log("Script chargé !");
 
 document.addEventListener('DOMContentLoaded', function() {
     // Sélectionner le bouton et la sidebar
@@ -76,7 +76,6 @@ carousels.forEach(carousel => {
 
     const images = carousel.querySelectorAll('.carousel-images img');
     const dots = carousel.querySelectorAll('.carousel-indicators .dot');
-    console.log(dots)
     const carouselImages = carousel.querySelector('.carousel-images');
     const leftArrow = carousel.querySelector('.carousel-arrow.left');
     const rightArrow = carousel.querySelector('.carousel-arrow.right');
@@ -91,8 +90,11 @@ carousels.forEach(carousel => {
             currentIndex = index;
         }
 
+        // Calcule la largeur de l'image visible
+        const imageWidth = carousel.clientWidth;
+
         // Met à jour la position du carrousel
-        carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+        carouselImages.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
 
         // Met à jour les indicateurs
         dots.forEach(dot => dot.classList.remove('active'));
@@ -113,6 +115,11 @@ carousels.forEach(carousel => {
         dot.addEventListener('click', () => {
             showImage(index);
         });
+    });
+
+    // Mettre à jour la largeur du carrousel à chaque redimensionnement
+    window.addEventListener('resize', () => {
+        showImage(currentIndex); // Recalculer l'image actuelle après redimensionnement
     });
 
     // Initialiser le carrousel
