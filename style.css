@@ -29,6 +29,12 @@ body {
     z-index: 30;
 }
 
+/* Transparence lorsque scroll */
+.top-bar.scrolled {
+    background-color: rgba(14, 14, 14, 0.8); /* Transparence de 20% */
+    color: #FFFFF0;
+}
+
 .top-lang {
     margin-left: 1%;
     margin-right: 2%;
@@ -51,6 +57,10 @@ body {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
+}
+
+.top-nav.scrolled {
+    color: #FFFFF0;
 }
 
 .top-nav.scrolled a{
@@ -87,6 +97,11 @@ body {
     cursor: pointer;
 }
 
+/* Bouton de toggle de la sidebar */
+.toggle-sidebar.scrolled {
+    color: #FFFFF0;
+}
+
 /* Sidebar */
 .sidebar {
     width: 250px;
@@ -110,65 +125,6 @@ body {
     transform: translateX(250px); /* Décale la sidebar à gauche */
 }
 
-/* Main Content */
-.main-content {
-    flex: 1;
-    text-align: center;
-}
-
-.main-content-hidden {
-    transform: translateX(250px); /* Décale la sidebar à gauche */
-}   
-
-/* Sections */
-section {
-    padding: 8rem;
-}
-
-/* Logo et texte dans la barre du haut */
-.top-bar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.top-bar .header-text {
-    font-size: 1rem;
-}
-
-/* Transparence lorsque scroll */
-.top-bar.scrolled {
-    background-color: rgba(14, 14, 14, 0.8); /* Transparence de 20% */
-    color: #FFFFF0;
-}
-
-.top-nav.scrolled {
-    color: #FFFFF0;
-}
-
-/* Bouton de toggle de la sidebar */
-.toggle-sidebar.scrolled {
-    color: #FFFFF0;
-}
-
-/* Profile Picture */
-.profile-picture {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center bottom;
-    border: 3px solid #FFFFF0;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.main-profile{
-    width: 300px;
-    height: 300px;
-    object-position: center top;
-    flex: 1;
-}
-
 /* Sidebar Navigation */
 .sidebar-nav ul {
     list-style: none;
@@ -188,6 +144,40 @@ section {
 
 .sidebar-nav a:hover {
     color: #c0c0c0;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    text-align: center;
+}
+
+.main-content-hidden {
+    transform: translateX(250px); /* Décale la sidebar à gauche */
+}   
+
+/* Sections */
+section {
+    padding: 8rem;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center bottom;
+    border: 3px solid #FFFFF0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.main-profile{
+    width: 300px;
+    height: 300px;
+    object-position: center top;
+    flex: 1;
 }
 
 /* Blocs de sections sur la page d'acceuil */
@@ -231,7 +221,7 @@ section {
 .site-footer {
     background-color: #0e0e0e;
     color: #FFFFF0;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: left;
 }
 
@@ -371,6 +361,9 @@ section {
     opacity: 0;
     z-index: 2;
     transition: opacity 0.3s ease-in-out;
+    width: 95%;           /* Assure que le texte occupe toute la largeur */
+    padding-left: 10px;    /* Si nécessaire, ajuster les marges internes */
+    padding-right: 10px;   /* Si nécessaire, ajuster les marges internes */
 }
 
 .banner-image:hover::after {
@@ -411,12 +404,15 @@ section {
     background-color: rgba(0, 0, 0, 0.5); 
 }
 
-/* Blocks des pages !Acceuil */
+/* Blocks des pages != Acceuil */
 .experience-block {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 2rem;
+    gap: 2rem;
     margin: 2rem 0;
+    flex-wrap: wrap;            /* Permet le retour à la ligne */
 }
 
 /* Bloc impair : fond ivoire */
@@ -432,13 +428,16 @@ section {
 }
 
 .exp-image {
-    width: 500px;
     height: 500px;
     overflow: hidden;
     object-fit: cover;
     border-radius: 10px;
     margin: 40px;
     flex-shrink: 0;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
 }
 
 .left {
@@ -452,6 +451,7 @@ section {
 
 .exp-text {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     text-align: justify;
@@ -470,26 +470,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Sections dépliable menu acceuil */
-.section-content {
-    max-height: 0; 
-    overflow: hidden;
-    padding: 0; /* Supprime le padding quand masqué */
-    color: #0e0e0e;
-    background-color: #FFFFF0;
-    transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
-    display: flex;
-    justify-content: center; 
-    text-align: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.section-content.active {
-    max-height: 500px; 
-    padding: 20px; /* Réactive le padding après clique*/
-}
-
 .section-image {
     width: 400px;
     height: 400px;
@@ -505,17 +485,6 @@ html {
 .right {
     margin-left: 40px; /* Gestion des marges pour alternance G/D*/
     order: 2;
-}
-
-.section-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 40px;
-    width: 50%;
 }
 
 /* Style des sections classiques*/
@@ -768,7 +737,6 @@ html {
     .footer-column {
         font-size: 10px;
         margin-bottom: 20px;
-        width: 100%;
     }
 
     .footer-column h3 {
@@ -782,6 +750,11 @@ html {
 
     .section {
         padding: 5rem;
+        font-size: 14px;
+    }
+
+    .section h1{
+        font-size: 20px;
     }
 
     .description-block {
@@ -898,45 +871,26 @@ html {
         height: 120px;
     }
 
-    .page-title {
-        color: #FFFFF0;
-        font-size: 2.5rem;
-        margin-top: 150px;
-        margin-bottom: auto; /* Enlève la marge en dessous */
-        font-weight: bold;
-    }
-
     #education-title{
         margin-top: auto;
         margin-bottom: auto;
     }
 
     /* Footer */
-    .footer-container {
-        align-items: center;
-    }
-
     .footer-column {
-        font-size: 10px;
         margin-bottom: 10px;
     }
 
-    .footer-column h3 {
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-
-    .footer-message {
-        font-size: 10px;
-    }
-    
-
     .section {
         padding: 3rem;
+        font-size: 10px;
+    }
+
+    .section h1{
+        font-size: 16px;
     }
 
     .experience-block {
-        flex-direction: column;
         padding: 1rem;
     }
 
@@ -948,6 +902,7 @@ html {
 
     .exp-text {
         font-size: 0.9rem;
+        text-align: start;     /* Centre le texte pour plus de lisibilité */
     }
 
     /* Carrousel */
@@ -968,11 +923,6 @@ html {
     .carousel-indicators .dot {
         width: 8px;
         height: 8px;
-    }
-
-    .section-image {
-        width: 100%;
-        height: auto;
     }
 }
 
@@ -1049,41 +999,10 @@ html {
     opacity: 1;
 }
 
-/* Conteneur de l'expérience */
-.experience-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2rem;
-    flex-wrap: wrap;            /* Permet le retour à la ligne */
-}
-
-/* Texte de l'expérience */
-.exp-text {
-    flex: 1;
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Réglage des images */
-.exp-image {
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 1 / 1;
-    border-radius: 10px;
-}
-
 /* --- Responsive Design --- */
 
 /* Pour les tablettes */
 @media (max-width: 768px) {
-    .experience-block {
-        flex-direction: column; /* Passer en mode colonne */
-        align-items: center;    /* Centrer les éléments */
-    }
-
     .carousel {
         width: 100%;            /* Le carousel prend la largeur du conteneur */
         aspect-ratio: 16 / 9;   /* Ratio légèrement plus rectangulaire */
@@ -1092,40 +1011,10 @@ html {
 
 /* Pour les mobiles */
 @media (max-width: 480px) {
-    .experience-block {
-        flex-direction: column; /* Empile le texte et le carousel */
-    }
-
     .carousel {
         width: 100%;            /* Pleine largeur sur mobile */
         aspect-ratio: 4 / 3;    /* Ratio adapté aux écrans mobiles */
     }
-
-    .exp-text {
-        text-align: start;     /* Centre le texte pour plus de lisibilité */
-        font-size: 0.9rem;      /* Réduit légèrement la taille de la police */
-    }
-}
-
-/* Sections dépliables */
-.section-content {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    color: #0e0e0e;
-    background-color: #FFFFF0;
-    transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    text-align: center;
-    flex-wrap: wrap; /* Pour forcer l'empilement sur petits écrans */
-}
-
-.section-content.active {
-    max-height: 500px;
-    padding: 20px;
 }
 
 /* Gestion du carrousel */
@@ -1155,15 +1044,15 @@ html {
     gap: 5px;
 }
 
-/* Section texte */
 .section-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     text-align: justify;
     font-size: 1rem;
     line-height: 1.5;
-    width: 50%; /* Largeur en grand écran */
+    margin: 40px;
+    width: 50%;
 }
 
 /* Responsive Design */
@@ -1176,6 +1065,10 @@ html {
     .section-text {
         width: 100%; /* Largeur en petit écran */
         margin: 0;
+    }
+
+    .section-text h2{
+        font-size: 20px;
     }
 
     .carousel {
@@ -1194,8 +1087,8 @@ html {
         font-size: 0.9rem; /* Réduit légèrement la taille du texte */
     }
 
-    .carousel {
-        max-width: 100%; /* Prend toute la largeur de l'écran */
+    .section-text h2{
+        font-size: 14px;
     }
 
     .section-text ul {
@@ -1213,7 +1106,12 @@ html {
         margin-top: 10px;
         font-size: 0.85rem;
     }
+
+    .carousel {
+        max-width: 100%; /* Prend toute la largeur de l'écran */
+    }
 }
+
 /* Sections dépliables */
 .section-content {
     max-height: 0;
@@ -1230,16 +1128,11 @@ html {
     flex-wrap: wrap;
 }
 
-/* Quand la section est active, la hauteur est automatique */
-.section-content.active {
-    max-height: 1000px; /* Donne une hauteur initiale plus grande */
-    padding: 20px;
-}
-
 /* Pour s'assurer qu'on prenne la hauteur complète selon le contenu */
 .section-content.active {
     max-height: none;
     overflow: visible;
+    padding: 20px;
 }
 
 /* Carrousel */
@@ -1259,29 +1152,8 @@ html {
     border-radius: 10px;
 }
 
-/* Texte de la section */
-.section-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
-    width: 50%;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .section-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .section-text {
-        width: 100%;
-        margin: 0;
-    }
-
     .carousel {
         width: 100%;
         max-width: 100%;
